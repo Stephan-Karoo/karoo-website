@@ -145,25 +145,54 @@
   }
 }
 
-/* ── Hero ────────────────────────────────────────────────── */
+/* ── Hero — LIGHT MODE DEFAULT ───────────────────────────── */
 .hero {
   min-height: 100svh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: var(--deep-slate);
+  background-color: var(--parchment);
   padding-block: var(--s8) var(--s7);
 }
 
-/* Halftone dot pattern — CSS-based texture */
+/* Layer 1: Halftone dot grid */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(165,100,50,0.15) 1px, transparent 1px);
-  background-size: 28px 28px;
-  opacity: 0.6;
+  background-image:
+    radial-gradient(circle, rgba(40,40,40,0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+}
+
+/* Layer 2: Diagonal stripe accent (subtle, right half only) */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 14px,
+      rgba(165,100,50,0.035) 14px,
+      rgba(165,100,50,0.035) 15px
+    );
+  pointer-events: none;
+}
+
+/* Orange corner accent block */
+.hero__corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(220px, 30vw, 420px);
+  height: clamp(220px, 30vw, 420px);
+  background: var(--orange);
+  opacity: 0.06;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
   pointer-events: none;
 }
 
@@ -176,14 +205,14 @@
   font-family: var(--font-impact);
   font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(245,242,237,0.45);
+  color: var(--text-subtle);
   margin-bottom: var(--s3);
 }
 
 .hero__heading {
-  color: var(--parchment);
+  color: var(--auth-black);
   font-size: clamp(3.2rem, 8.5vw, 7rem);
   line-height: 1.0;
   font-weight: 700;
@@ -199,7 +228,7 @@
 
 .hero__body {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: rgba(245,242,237,0.6);
+  color: var(--text-muted);
   max-width: 56ch;
   line-height: 1.7;
   margin-bottom: var(--s5);
@@ -213,12 +242,12 @@
 }
 
 .hero__actions .btn--secondary {
-  color: var(--parchment);
-  border-color: rgba(245,242,237,0.25);
+  color: var(--auth-black);
+  border-color: rgba(40,40,40,0.22);
 }
 
 .hero__actions .btn--secondary:hover {
-  border-color: rgba(245,242,237,0.55);
+  border-color: var(--auth-black);
 }
 
 .hero__status {
@@ -228,20 +257,21 @@
   font-family: var(--font-ui);
   font-size: 0.78rem;
   font-weight: 500;
-  color: rgba(245,242,237,0.4);
+  color: var(--text-subtle);
   letter-spacing: 0.06em;
 }
 
-/* Hero decorative accent */
+/* Hero decorative accent circles */
 .hero__accent {
   position: absolute;
   right: -5%;
   bottom: -10%;
   width: clamp(300px, 45vw, 600px);
   aspect-ratio: 1;
-  border: 1px solid rgba(165,100,50,0.12);
+  border: 1px solid rgba(165,100,50,0.14);
   border-radius: 50%;
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero__accent::before {
@@ -255,6 +285,71 @@
 @media (max-width: 768px) {
   .hero__heading { font-size: clamp(2.5rem, 10vw, 4rem); }
   .hero { padding-top: var(--s7); }
+}
+
+/* ── Division Colour Bar ─────────────────────────────────── */
+.colour-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.colour-bar__seg {
+  padding: 1.1rem var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: padding var(--t-base);
+}
+
+/* Hatched diagonal overlay on each segment */
+.colour-bar__seg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(0,0,0,0.07) 6px,
+    rgba(0,0,0,0.07) 7px
+  );
+  pointer-events: none;
+}
+
+.colour-bar__seg--orange { background: var(--orange); }
+.colour-bar__seg--red    { background: var(--red); }
+.colour-bar__seg--green  { background: var(--green); }
+.colour-bar__seg--blue   { background: var(--blue); }
+
+.colour-bar__label {
+  font-family: var(--font-impact);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245,242,237,0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.colour-bar__sub {
+  font-family: var(--font-impact);
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,242,237,0.5);
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .colour-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ── Division Cards ──────────────────────────────────────── */
@@ -1131,23 +1226,52 @@
   }
 }
 
-/* ── Page-specific: Hero variations ─────────────────────── */
+/* ── Page-specific: Hero variations — LIGHT MODE ─────────── */
 .page-hero {
-  background: var(--deep-slate);
+  background-color: var(--parchment);
   padding: calc(var(--s8) + 2rem) 0 var(--s7);
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--border);
 }
 
+/* Halftone dot texture */
 .page-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(165,100,50,0.10) 1px, transparent 1px);
-  background-size: 32px 32px;
-  opacity: 0.5;
+  background-image:
+    radial-gradient(circle, rgba(40,40,40,0.065) 1px, transparent 1px);
+  background-size: 22px 22px;
   pointer-events: none;
 }
+
+/* Cross-hatch grid overlay */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg,   transparent, transparent 28px, rgba(165,100,50,0.04) 28px, rgba(165,100,50,0.04) 29px),
+    repeating-linear-gradient(90deg,  transparent, transparent 28px, rgba(165,100,50,0.04) 28px, rgba(165,100,50,0.04) 29px);
+  pointer-events: none;
+}
+
+/* Division colour bar at top of page hero */
+.page-hero__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.page-hero__bar span:nth-child(1) { background: var(--orange); }
+.page-hero__bar span:nth-child(2) { background: var(--red); }
+.page-hero__bar span:nth-child(3) { background: var(--green); }
+.page-hero__bar span:nth-child(4) { background: var(--blue); }
 
 .page-hero__inner {
   position: relative;
@@ -1165,13 +1289,13 @@
 }
 
 .page-hero__heading {
-  color: var(--parchment);
+  color: var(--auth-black);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   margin-bottom: var(--s3);
 }
 
 .page-hero__sub {
-  color: rgba(245,242,237,0.55);
+  color: var(--text-muted);
   font-size: 1.1rem;
   line-height: 1.7;
   max-width: 50ch;
