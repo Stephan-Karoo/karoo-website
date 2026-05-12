@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Karoo | Start a Project | Melbourne</title>
+  <meta name="description" content="Ready to build? Send us a brief or call Stephan directly. 27 Herbert Street, St Kilda VIC 3182. 0434 636 532. info@karoomedia.com.">
+  <meta name="theme-color" content="#1B1E23">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Karoo",
+    "url": "https://karoo.com.au",
+    "telephone": "0434636532",
+    "email": "info@karoomedia.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "27 Herbert Street",
+      "addressLocality": "St Kilda",
+      "addressRegion": "VIC",
+      "postalCode": "3182",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-37.8576",
+      "longitude": "144.9829"
+    },
+    "openingHours": "Mo-Fr 09:00-17:00"
+  }
+  </script>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="Karoo home">
+      <!-- <img src="images/logos/karoo-logo-light.svg" alt="Karoo" width="110" height="40"> -->
+      <span class="navbar__logo-text">K<span>a</span>roo</span>
+    </a>
+    <ul class="navbar__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
+    <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar__mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<!-- ── Page Hero ──────────────────────────────────────────── -->
+<header class="page-hero">
+  <div class="container page-hero__inner">
+    <p class="page-hero__eyebrow">Get in touch</p>
+    <h1 class="page-hero__heading">Let's map<br>the system.</h1>
+    <p class="page-hero__sub">
+      Tell us what you're trying to build or fix. We'll come back
+      to you within one business day with a clear next step.
+    </p>
+  </div>
+</header>
+
+<!-- ── Contact Form + Details ────────────────────────────── -->
+<section class="contact-page-body" aria-labelledby="contact-form-heading">
+  <div class="container">
+    <div class="contact-page-grid">
+
+      <!-- Contact details -->
+      <div class="contact-details reveal">
+        <p class="section-label">Contact details</p>
+        <h2 class="reveal" id="contact-form-heading" style="font-size:1.6rem; margin-bottom:var(--s4);">Direct line to Stephan.</h2>
+
+        <div class="contact-detail-item">
+          <span class="contact-detail-label">Address</span>
+          <span class="contact-detail-value">27 Herbert Street<br>St Kilda VIC 3182</span>
+        </div>
+
+        <div class="contact-detail-item">
+          <span class="contact-detail-label">Phone</span>
+          <span class="contact-detail-value">
+            <a href="tel:0434636532">0434 636 532</a>
+          </span>
+        </div>
+
+        <div class="contact-detail-item">
+          <span class="contact-detail-label">Email</span>
+          <span class="contact-detail-value">
+            <a href="mailto:info@karoomedia.com">info@karoomedia.com</a>
+          </span>
+        </div>
+
+        <div class="contact-detail-item">
+          <span class="contact-detail-label">Hours</span>
+          <span class="contact-detail-value">Monday – Friday, 9am – 5pm AEST</span>
+        </div>
+
+        <div class="map-placeholder" aria-label="Map showing St Kilda, Melbourne location">
+          St Kilda, Melbourne VIC
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="contact-light-form reveal reveal--delay-1">
+        <p style="font-family:var(--font-ui); font-size:0.78rem; font-weight:600; color:var(--text-muted); margin-bottom:var(--s4);">
+          Fill in the brief below — the more detail, the better we can scope it.
+        </p>
+        <form class="js-contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Name *</label>
+              <input type="text" id="c-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email *</label>
+              <input type="email" id="c-email" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-company">Company</label>
+            <input type="text" id="c-company" name="company" placeholder="Your company or business name">
+          </div>
+
+          <div class="form-group">
+            <label for="c-division">Which division do you need?</label>
+            <select id="c-division" name="division">
+              <option value="" disabled selected>Select a division…</option>
+              <option value="digital-media">Digital Media — Web &amp; Content</option>
+              <option value="digital-marketing">Digital Marketing — Ads &amp; Growth</option>
+              <option value="it-services">IT Services — Cloud &amp; Hosting</option>
+              <option value="ai-automation">AI Automation — Agents &amp; n8n</option>
+              <option value="multiple">Multiple divisions</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-brief">Tell us what you're working on *</label>
+            <textarea
+              id="c-brief"
+              name="brief"
+              rows="6"
+              placeholder="Describe the problem or project. What's broken, what's missing, what do you want to build? The more detail, the better."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="c-budget">Approximate budget (optional)</label>
+            <select id="c-budget" name="budget">
+              <option value="" disabled selected>Select a range…</option>
+              <option value="under-5k">Under $5,000</option>
+              <option value="5-15k">$5,000 – $15,000</option>
+              <option value="15-30k">$15,000 – $30,000</option>
+              <option value="30k-plus">$30,000+</option>
+              <option value="ongoing">Ongoing retainer</option>
+            </select>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary btn--magnetic">Send brief →</button>
+          </div>
+
+          <p style="font-family:var(--font-ui); font-size:0.72rem; color:var(--text-subtle); margin-top:var(--s2); line-height:1.6;">
+            We'll respond within one business day. Your details are kept private
+            and never shared.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── What Happens Next ──────────────────────────────────── -->
+<section class="what-next" aria-labelledby="what-next-heading">
+  <div class="container">
+    <p class="section-label reveal" id="what-next-heading">After you submit</p>
+    <h2 class="reveal reveal--delay-1">What happens next.</h2>
+    <div class="what-next__steps">
+      <div class="what-next__step reveal">
+        <p class="what-next__num">01</p>
+        <h3 class="what-next__title">We read your brief</h3>
+        <p class="what-next__body">
+          Stephan reviews your submission personally. If anything is unclear,
+          we'll ask one focused question — not a 20-item questionnaire.
+        </p>
+      </div>
+      <div class="what-next__step reveal reveal--delay-1">
+        <p class="what-next__num">02</p>
+        <h3 class="what-next__title">We respond within a day</h3>
+        <p class="what-next__body">
+          You'll hear back within one business day with either a discovery call
+          invitation or a rough scope outline — depending on what the project needs.
+        </p>
+      </div>
+      <div class="what-next__step reveal reveal--delay-2">
+        <p class="what-next__num">03</p>
+        <h3 class="what-next__title">We scope and propose</h3>
+        <p class="what-next__body">
+          If there's a fit, we put together a written scope — costed, sequenced,
+          and plain-language. No surprises, no hidden extras.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <p class="footer__brand-name">Karoo</p>
+        <p class="footer__brand-tagline">We engineer systems that scale.</p>
+        <p class="footer__brand-desc">
+          27 Herbert Street, St Kilda VIC 3182<br>
+          <a href="tel:0434636532" style="color:inherit;">0434 636 532</a><br>
+          <a href="mailto:info@karoomedia.com" style="color:inherit;">info@karoomedia.com</a>
+        </p>
+      </div>
+      <nav aria-label="Site links">
+        <p class="footer__col-label">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Division links">
+        <p class="footer__col-label">Divisions</p>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html#digital-media">Digital Media</a></li>
+          <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+          <li><a href="services.html#it-services">IT Services</a></li>
+          <li><a href="services.html#ai-automation">AI Automation</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer__col-label">Contact</p>
+        <ul class="footer__links" role="list">
+          <li><a href="tel:0434636532">0434 636 532</a></li>
+          <li><a href="mailto:info@karoomedia.com">info@karoomedia.com</a></li>
+          <li><a href="contact.html">Send a brief</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Karoo. All rights reserved. Melbourne, Australia.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karoo — We engineer systems that scale. | Melbourne Digital Agency</title>
+  <meta name="description" content="Karoo is a Melbourne digital agency with four specialist divisions: Digital Media, Digital Marketing, IT Services, and AI Automation. We build the web, run the ads, hold the stack, and automate the rest.">
+  <meta name="theme-color" content="#1B1E23">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Critical font preload (add your woff2 files first) -->
+  <!-- <link rel="preload" href="fonts/roslindale/RoslindaleVariable-Display.woff2" as="font" type="font/woff2" crossorigin> -->
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Schema: Organisation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Karoo",
+    "url": "https://karoo.com.au",
+    "telephone": "0434636532",
+    "email": "info@karoomedia.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "27 Herbert Street",
+      "addressLocality": "St Kilda",
+      "addressRegion": "VIC",
+      "postalCode": "3182",
+      "addressCountry": "AU"
+    },
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar" aria-label="Main navigation">
+  <div class="navbar__inner">
+
+    <a href="/" class="navbar__logo" aria-label="Karoo home">
+      <!-- Swap img tag once logo SVGs are in images/logos/ -->
+      <!-- <img src="images/logos/karoo-logo-light.svg" alt="Karoo" width="110" height="40"> -->
+      <span class="navbar__logo-text">K<span>a</span>roo</span>
+    </a>
+
+    <ul class="navbar__links" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a href="contact.html" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
+
+    <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="navbar__mobile-menu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top:0.5rem; text-align:center; justify-content:center;">Start a project →</a>
+  </nav>
+</nav>
+
+<!-- ── Hero ──────────────────────────────────────────────── -->
+<section class="hero" id="hero">
+  <div class="container hero__inner">
+    <p class="hero__eyebrow">karoo melbourne</p>
+    <h1 class="hero__heading">We engineer<br><em>systems</em> that scale.</h1>
+    <p class="hero__body">
+      Four divisions. One team. Karoo builds the web, runs the ads,
+      holds the stack, and automates the rest — for operators who
+      want infrastructure that actually ships.
+    </p>
+    <div class="hero__actions">
+      <a href="contact.html" class="btn btn--primary btn--magnetic">Start a project →</a>
+      <a href="work.html"    class="btn btn--secondary btn--magnetic">See our work →</a>
+    </div>
+    <div class="hero__status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>System Online</span>
+    </div>
+  </div>
+  <div class="hero__accent" aria-hidden="true"></div>
+</section>
+
+<!-- ── Division Strip ────────────────────────────────────── -->
+<section class="divisions" id="divisions" aria-labelledby="divisions-heading">
+  <div class="container">
+    <p class="section-label" id="divisions-heading">What we do</p>
+    <div class="divisions__grid" role="list">
+
+      <!-- Digital Media -->
+      <article class="division-card division-card--orange reveal" role="listitem">
+        <div class="division-card__top">
+          <span class="division-card__label">Digital Media</span>
+          <span class="division-card__services">WEB · CONTENT</span>
+        </div>
+        <h3 class="division-card__tagline">Build the surface.</h3>
+        <p class="division-card__body">
+          Custom websites, content systems, and editorial design.
+          WordPress, Webflow, headless — whatever fits.
+        </p>
+        <a href="services.html#digital-media" class="division-card__link">Learn more →</a>
+      </article>
+
+      <!-- Digital Marketing -->
+      <article class="division-card division-card--red reveal reveal--delay-1" role="listitem">
+        <div class="division-card__top">
+          <span class="division-card__label">Digital Marketing</span>
+          <span class="division-card__services">ADS · GROWTH</span>
+        </div>
+        <h3 class="division-card__tagline">Drive the demand.</h3>
+        <p class="division-card__body">
+          Google & Meta Ads, conversion-rate work, and the analytics
+          scaffolding to prove it worked.
+        </p>
+        <a href="services.html#digital-marketing" class="division-card__link">Learn more →</a>
+      </article>
+
+      <!-- IT Services -->
+      <article class="division-card division-card--green reveal reveal--delay-2" role="listitem">
+        <div class="division-card__top">
+          <span class="division-card__label">IT Services</span>
+          <span class="division-card__services">CLOUD · HOSTING</span>
+        </div>
+        <h3 class="division-card__tagline">Hold the stack.</h3>
+        <p class="division-card__body">
+          Cloud infrastructure, managed WordPress hosting, and the kind
+          of monitoring that calls you, not the other way around.
+        </p>
+        <a href="services.html#it-services" class="division-card__link">Learn more →</a>
+      </article>
+
+      <!-- AI Automation -->
+      <article class="division-card division-card--blue reveal reveal--delay-3" role="listitem">
+        <div class="division-card__top">
+          <span class="division-card__label">AI Automation</span>
+          <span class="division-card__services">AGENTS · N8N</span>
+        </div>
+        <h3 class="division-card__tagline">Automate the rest.</h3>
+        <p class="division-card__body">
+          n8n workflows, AI agents, and the integrations between your
+          stack and your stack's stack.
+        </p>
+        <a href="services.html#ai-automation" class="division-card__link">Learn more →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Feature Widgets ────────────────────────────────────── -->
+<section class="features" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="features__header reveal">
+      <p class="section-label" id="features-heading">Live systems</p>
+      <h2>Infrastructure that actually runs.</h2>
+    </div>
+
+    <div class="features__grid">
+
+      <!-- Workflow Runner -->
+      <div class="widget widget--workflow reveal reveal--delay-1" aria-label="Workflow runner">
+        <div class="widget__header">
+          <span class="widget__label">Workflow Runner</span>
+          <span class="widget__badge widget__badge--live">● Live</span>
+        </div>
+        <div class="workflow">
+          <div class="workflow__node">Trigger → New Lead</div>
+          <div class="workflow__connector"></div>
+          <div class="workflow__node">Enrich → CRM</div>
+          <div class="workflow__connector"></div>
+          <div class="workflow__node">Notify → Slack</div>
+          <div class="workflow__connector"></div>
+          <div class="workflow__node">Email → ActiveCampaign</div>
+        </div>
+      </div>
+
+      <!-- Campaign Feed -->
+      <div class="widget widget--feed reveal reveal--delay-2" aria-label="Live campaign feed">
+        <div class="widget__header">
+          <span class="widget__label">Campaign Feed</span>
+          <span class="widget__badge widget__badge--feed">● Live</span>
+        </div>
+        <div class="feed">
+          <div class="feed__track" aria-live="polite">
+            <div class="feed__item">CTR +12.4% — Google / Childcare</div>
+            <div class="feed__item feed__item--red">ROAS 4.2× — Meta / Trades</div>
+            <div class="feed__item feed__item--green">CPC ↓18% — Google / Food</div>
+            <div class="feed__item feed__item--blue">Workflow triggered — n8n / CRM</div>
+            <div class="feed__item">Conv. +34 — Google / Services</div>
+            <div class="feed__item feed__item--red">Revenue +$8.4k — Meta / Retail</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="feed__item" aria-hidden="true">CTR +12.4% — Google / Childcare</div>
+            <div class="feed__item feed__item--red" aria-hidden="true">ROAS 4.2× — Meta / Trades</div>
+            <div class="feed__item feed__item--green" aria-hidden="true">CPC ↓18% — Google / Food</div>
+            <div class="feed__item feed__item--blue" aria-hidden="true">Workflow triggered — n8n / CRM</div>
+            <div class="feed__item" aria-hidden="true">Conv. +34 — Google / Services</div>
+            <div class="feed__item feed__item--red" aria-hidden="true">Revenue +$8.4k — Meta / Retail</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ops Checklist -->
+      <div class="widget widget--checklist reveal reveal--delay-3" aria-label="Ops checklist">
+        <div class="widget__header">
+          <span class="widget__label">Ops Checklist</span>
+          <span class="widget__badge widget__badge--ops">Running</span>
+        </div>
+        <ul class="checklist" role="list">
+          <li class="checklist__item">
+            <span class="checklist__check" aria-hidden="true">
+              <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            DNS configured
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__check" aria-hidden="true">
+              <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            SSL installed
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__check" aria-hidden="true">
+              <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            CDN active
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__check" aria-hidden="true">
+              <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Monitoring setup
+          </li>
+          <li class="checklist__item">
+            <span class="checklist__check" aria-hidden="true">
+              <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Backups enabled
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Process ────────────────────────────────────────────── -->
+<section class="process" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="process__header">
+      <div class="reveal">
+        <p class="section-label" id="process-heading">How we work</p>
+        <h2>Four steps.<br>No surprises.</h2>
+      </div>
+      <p class="reveal reveal--delay-1" style="max-width:36ch;">
+        Every engagement follows the same sequence. Honest scoping, clear specs,
+        open builds, and ongoing ownership.
+      </p>
+    </div>
+
+    <div class="process__grid">
+      <div class="process__step reveal">
+        <p class="process__num">01</p>
+        <h3 class="process__title">Scope</h3>
+        <p class="process__body">We map the system end-to-end before a line of code is written.</p>
+      </div>
+      <div class="process__step reveal reveal--delay-1">
+        <p class="process__num">02</p>
+        <h3 class="process__title">Spec</h3>
+        <p class="process__body">Written, costed, sequenced. You know exactly what you're getting.</p>
+      </div>
+      <div class="process__step reveal reveal--delay-2">
+        <p class="process__num">03</p>
+        <h3 class="process__title">Ship</h3>
+        <p class="process__body">We build in the open. Weekly demos. No disappearing acts.</p>
+      </div>
+      <div class="process__step reveal reveal--delay-3">
+        <p class="process__num">04</p>
+        <h3 class="process__title">Hold</h3>
+        <p class="process__body">We stay on the stack. Monitoring, iteration, and the fixes that actually matter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Proof ──────────────────────────────────────────────── -->
+<section class="proof" aria-labelledby="proof-heading">
+  <div class="container">
+    <div class="proof__header reveal">
+      <div>
+        <p class="section-label" id="proof-heading">Selected work</p>
+        <h2>Built. Shipped. Running.</h2>
+      </div>
+      <a href="work.html" class="btn btn--secondary btn--magnetic">See all work →</a>
+    </div>
+
+    <div class="proof__grid">
+
+      <!-- Digital Media projects (orange) -->
+      <article class="project-card reveal">
+        <div class="project-card__thumb project-card__thumb--orange">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Childcare</span>
+            <span class="tag">WordPress</span>
+          </div>
+          <p class="project-card__title">Little Explorers Childcare Centre</p>
+          <p class="project-card__outcome">New site → 3× enquiry rate in 60 days</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal--delay-1">
+        <div class="project-card__thumb project-card__thumb--orange">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Trades</span>
+            <span class="tag">Webflow</span>
+          </div>
+          <p class="project-card__title">Apex Plumbing & Gas</p>
+          <p class="project-card__outcome">Editorial redesign → top-3 local SEO</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal--delay-2">
+        <div class="project-card__thumb project-card__thumb--orange">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Food</span>
+            <span class="tag">Headless</span>
+          </div>
+          <p class="project-card__title">Harvest & Co. Brand Site</p>
+          <p class="project-card__outcome">Full brand rebuild + online ordering</p>
+        </div>
+      </article>
+
+      <!-- Digital Marketing projects (red) -->
+      <article class="project-card reveal reveal--delay-3">
+        <div class="project-card__thumb project-card__thumb--red">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Manufacturing</span>
+            <span class="tag">Google Ads</span>
+          </div>
+          <p class="project-card__title">Precision Parts Australia</p>
+          <p class="project-card__outcome">ROAS 6.8× in first 90 days</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card__thumb project-card__thumb--red">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Professional Services</span>
+            <span class="tag">Meta Ads</span>
+          </div>
+          <p class="project-card__title">Meridian Accounting Group</p>
+          <p class="project-card__outcome">CPA ↓42% → $38 per lead average</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal--delay-1">
+        <div class="project-card__thumb project-card__thumb--red">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Childcare</span>
+            <span class="tag">Growth</span>
+          </div>
+          <p class="project-card__title">Bloom Early Learning</p>
+          <p class="project-card__outcome">Waitlist filled → 2 new rooms opened</p>
+        </div>
+      </article>
+
+      <!-- IT Services projects (green) -->
+      <article class="project-card reveal reveal--delay-2">
+        <div class="project-card__thumb project-card__thumb--green">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Manufacturing</span>
+            <span class="tag">Cloud</span>
+          </div>
+          <p class="project-card__title">Allied Industries Cloud Migration</p>
+          <p class="project-card__outcome">Zero-downtime migration → 99.98% uptime</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal--delay-3">
+        <div class="project-card__thumb project-card__thumb--green">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Trades</span>
+            <span class="tag">Managed Hosting</span>
+          </div>
+          <p class="project-card__title">Tradeline Group WordPress</p>
+          <p class="project-card__outcome">Managed hosting + monitoring stack</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card__thumb project-card__thumb--green">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Food</span>
+            <span class="tag">Security</span>
+          </div>
+          <p class="project-card__title">Pantry Direct Security Hardening</p>
+          <p class="project-card__outcome">Full audit → zero incidents since 2023</p>
+        </div>
+      </article>
+
+      <!-- AI Automation projects (blue) -->
+      <article class="project-card reveal reveal--delay-1">
+        <div class="project-card__thumb project-card__thumb--blue">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Professional Services</span>
+            <span class="tag">n8n</span>
+          </div>
+          <p class="project-card__title">Legal Brief Automation System</p>
+          <p class="project-card__outcome">12 hrs/week recovered via n8n workflow</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal--delay-2">
+        <div class="project-card__thumb project-card__thumb--blue">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Childcare</span>
+            <span class="tag">AI Agent</span>
+          </div>
+          <p class="project-card__title">Enquiry Response AI Agent</p>
+          <p class="project-card__outcome">Respond in 90 sec, 24/7, 0 staff cost</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal--delay-3">
+        <div class="project-card__thumb project-card__thumb--blue">
+          <div class="project-card__thumb-inner"><span class="project-card__thumb-label">Project Image</span></div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Manufacturing</span>
+            <span class="tag">CRM</span>
+          </div>
+          <p class="project-card__title">Quote-to-Invoice Automation</p>
+          <p class="project-card__outcome">Full pipeline automated → $0 admin cost</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Bio Preview ────────────────────────────────────────── -->
+<section class="bio" aria-labelledby="bio-heading">
+  <div class="container">
+    <div class="bio__inner">
+      <div class="bio__photo">
+        <!-- Replace src with Stephan headshot -->
+        <!-- <img src="images/stephan-alberts.webp" alt="Stephan Alberts, Founder of Karoo" loading="lazy"> -->
+        <div class="bio__photo-placeholder">Stephan Alberts</div>
+      </div>
+      <div class="bio__content reveal">
+        <p class="section-label">The person behind it</p>
+        <h2 class="bio__name" id="bio-heading">Stephan Alberts</h2>
+        <p class="bio__role">Founder, Karoo</p>
+        <p class="bio__text">
+          15+ years building digital systems for local businesses.
+          Melbourne-based. You'll work directly with me.
+        </p>
+        <p class="bio__text">
+          Started with websites, expanded into marketing and IT, now
+          focused on AI automation and the infrastructure that connects it all.
+        </p>
+        <a href="about.html" class="btn btn--secondary btn--magnetic bio__cta">More about Karoo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact Section ────────────────────────────────────── -->
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-section__inner">
+
+      <div class="contact-info reveal">
+        <p class="section-label" style="color:rgba(245,242,237,0.3);">Get in touch</p>
+        <h2 class="contact-info__heading" id="contact-heading">Ready to start?<br>Let's talk.</h2>
+        <div class="contact-info__detail">
+          <div class="contact-info__item">
+            <span class="contact-info__item-label">Address</span>
+            <span class="contact-info__item-value">27 Herbert Street, St Kilda VIC 3182</span>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__item-label">Phone</span>
+            <span class="contact-info__item-value">
+              <a href="tel:0434636532">0434 636 532</a>
+            </span>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__item-label">Email</span>
+            <span class="contact-info__item-value">
+              <a href="mailto:info@karoomedia.com">info@karoomedia.com</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal--delay-1">
+        <form class="js-contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="h-name">Name</label>
+              <input type="text" id="h-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="h-email">Email</label>
+              <input type="email" id="h-email" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="h-company">Company</label>
+            <input type="text" id="h-company" name="company" placeholder="Your company (optional)">
+          </div>
+          <div class="form-group">
+            <label for="h-division">Which division?</label>
+            <select id="h-division" name="division">
+              <option value="" disabled selected>Select a division…</option>
+              <option value="digital-media">Digital Media — Web &amp; Content</option>
+              <option value="digital-marketing">Digital Marketing — Ads &amp; Growth</option>
+              <option value="it-services">IT Services — Cloud &amp; Hosting</option>
+              <option value="ai-automation">AI Automation — Agents &amp; n8n</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="h-brief">Brief</label>
+            <textarea id="h-brief" name="brief" placeholder="Tell us what you're trying to build or fix…" rows="4"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary btn--magnetic">Send brief →</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <p class="footer__brand-name">Karoo</p>
+        <p class="footer__brand-tagline">We engineer systems that scale.</p>
+        <p class="footer__brand-desc">
+          27 Herbert Street, St Kilda VIC 3182<br>
+          <a href="tel:0434636532" style="color:inherit;">0434 636 532</a><br>
+          <a href="mailto:info@karoomedia.com" style="color:inherit;">info@karoomedia.com</a>
+        </p>
+      </div>
+      <nav aria-label="Site links">
+        <p class="footer__col-label">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Division links">
+        <p class="footer__col-label">Divisions</p>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html#digital-media">Digital Media</a></li>
+          <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+          <li><a href="services.html#it-services">IT Services</a></li>
+          <li><a href="services.html#ai-automation">AI Automation</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer__col-label">Contact</p>
+        <ul class="footer__links" role="list">
+          <li><a href="tel:0434636532">0434 636 532</a></li>
+          <li><a href="mailto:info@karoomedia.com">info@karoomedia.com</a></li>
+          <li><a href="contact.html">Send a brief</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Karoo. All rights reserved. Melbourne, Australia.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

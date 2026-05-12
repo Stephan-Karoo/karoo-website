@@ -1,0 +1,344 @@
+/* ============================================================
+   KAROO — Global Styles
+   Fonts, variables, reset, base typography, utilities
+   ============================================================ */
+
+/* Google Fonts — Montserrat + Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ── Self-hosted Fonts ────────────────────────────────────── */
+/* Place Roslindale woff2 files in /fonts/roslindale/         */
+/* Expected filename: RoslindaleVariable-Display.woff2        */
+@font-face {
+  font-family: 'Roslindale';
+  src: url('../fonts/roslindale/RoslindaleVariable-Display.woff2') format('woff2-variations'),
+       url('../fonts/roslindale/RoslindaleVariable-Display.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roslindale';
+  src: url('../fonts/roslindale/RoslindaleVariable-DisplayItalic.woff2') format('woff2-variations'),
+       url('../fonts/roslindale/RoslindaleVariable-DisplayItalic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Place Akira Expanded woff2 in /fonts/akira/               */
+/* Expected filename: AkiraExpanded.woff2                     */
+@font-face {
+  font-family: 'Akira';
+  src: url('../fonts/akira/AkiraExpanded.woff2') format('woff2'),
+       url('../fonts/akira/AkiraExpanded.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design Tokens ───────────────────────────────────────── */
+:root {
+  /* Division colours */
+  --orange:       #A56432;
+  --red:          #A23137;
+  --green:        #416963;
+  --blue:         #2E4A6F;
+
+  /* Base palette */
+  --parchment:    #F5F2ED;
+  --deep-slate:   #1B1E23;
+  --auth-black:   #282828;
+  --white:        #FFFFFF;
+
+  /* Semantic — light mode defaults */
+  --bg:           var(--parchment);
+  --bg-raised:    #EDE9E3;
+  --bg-card:      #ECEAE5;
+  --text:         var(--auth-black);
+  --text-muted:   #6B6560;
+  --text-subtle:  #9B958F;
+  --border:       rgba(40, 40, 40, 0.10);
+  --border-strong:rgba(40, 40, 40, 0.18);
+
+  /* Typography */
+  --font-display: 'Roslindale', 'Playfair Display', Georgia, serif;
+  --font-impact:  'Akira', 'Barlow Condensed', Impact, sans-serif;
+  --font-body:    'Montserrat', system-ui, sans-serif;
+  --font-ui:      'Poppins', system-ui, sans-serif;
+
+  /* Spacing scale (8px base) */
+  --s1:   0.5rem;   /*  8px */
+  --s2:   1rem;     /* 16px */
+  --s3:   1.5rem;   /* 24px */
+  --s4:   2rem;     /* 32px */
+  --s5:   3rem;     /* 48px */
+  --s6:   4rem;     /* 64px */
+  --s7:   6rem;     /* 96px */
+  --s8:   8rem;     /* 128px */
+
+  /* Border radius */
+  --r-sm:   8px;
+  --r-md:   18px;
+  --r-lg:   28px;
+  --r-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.09);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.13);
+
+  /* Transitions */
+  --t-fast:  0.15s ease;
+  --t-base:  0.25s ease;
+  --t-slow:  0.4s ease;
+
+  /* Layout */
+  --max-w:      1200px;
+  --max-w-text:  720px;
+}
+
+/* Dark mode overrides (applied by JS on .dark-mode body) */
+body.dark-mode {
+  --bg:           var(--deep-slate);
+  --bg-raised:    #22262D;
+  --bg-card:      #2A2F38;
+  --text:         var(--white);
+  --text-muted:   #A8B0C0;
+  --text-subtle:  #606878;
+  --border:       rgba(255,255,255,0.08);
+  --border-strong:rgba(255,255,255,0.15);
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  transition: background var(--t-slow), color var(--t-slow);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ── Grain overlay ───────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 700; }
+h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.4rem, 3vw, 2rem);   font-weight: 600; }
+h4 { font-size: 1.25rem; font-weight: 600; }
+
+p  {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.label {
+  font-family: var(--font-impact);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ── Layout utilities ────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--s4);
+}
+
+.container--narrow {
+  max-width: var(--max-w-text);
+}
+
+section {
+  padding-block: var(--s7);
+}
+
+.section-label {
+  font-family: var(--font-impact);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  margin-bottom: var(--s3);
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.8em 1.7em;
+  border-radius: var(--r-pill);
+  transition: transform var(--t-base), box-shadow var(--t-base), background var(--t-fast);
+  will-change: transform;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--orange);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(165,100,50,0.25);
+}
+
+.btn--primary:hover {
+  background: #B87038;
+  box-shadow: 0 8px 28px rgba(165,100,50,0.35);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border-strong);
+}
+
+.btn--secondary:hover {
+  border-color: var(--text);
+  transform: translateY(-2px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0;
+  border-radius: 0;
+}
+
+.btn--ghost:hover {
+  color: var(--text);
+}
+
+/* Magnetic effect — JS adds micro-translate via inline style */
+.btn--magnetic {
+  transition: transform 0.1s ease, box-shadow var(--t-base), background var(--t-fast);
+}
+
+/* ── Status dot ──────────────────────────────────────────── */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4CAF50;
+  animation: pulse-dot 2.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(76,175,80,0.4); }
+  50%       { opacity: 0.8; transform: scale(0.9); box-shadow: 0 0 0 6px rgba(76,175,80,0); }
+}
+
+/* ── Scroll reveal ───────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--delay-1 { transition-delay: 0.1s; }
+.reveal--delay-2 { transition-delay: 0.2s; }
+.reveal--delay-3 { transition-delay: 0.3s; }
+.reveal--delay-4 { transition-delay: 0.4s; }
+
+/* ── Responsive breakpoints ──────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --s6: 3rem;
+    --s7: 4rem;
+    --s8: 5rem;
+  }
+  .container {
+    padding-inline: var(--s3);
+  }
+  section {
+    padding-block: var(--s6);
+  }
+}
