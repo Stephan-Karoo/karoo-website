@@ -830,6 +830,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.25rem;
+}
+
+.project-card__thumb-inner img {
+  max-width: 75%;
+  max-height: 75%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(15%);
+  transition: filter var(--t-base), transform var(--t-base);
+}
+
+.project-card:hover .project-card__thumb-inner img {
+  filter: none;
+  transform: scale(1.04);
 }
 
 .project-card__thumb-label {
@@ -840,6 +856,77 @@
   text-transform: uppercase;
   color: var(--text-subtle);
   opacity: 0.5;
+}
+
+/* ── Client Logo Strip ───────────────────────────────────── */
+.client-strip {
+  background: var(--bg);
+  padding-block: var(--s5);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.client-strip .container {
+  margin-bottom: var(--s3);
+}
+
+.client-strip__track-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.client-strip__track-wrap::before,
+.client-strip__track-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.client-strip__track-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.client-strip__track-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+
+.client-strip__track {
+  display: flex;
+  align-items: center;
+  gap: var(--s5);
+  animation: strip-scroll 35s linear infinite;
+  width: max-content;
+}
+
+.client-strip__track:hover {
+  animation-play-state: paused;
+}
+
+.client-strip__logo {
+  height: 44px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.45;
+  transition: filter var(--t-base), opacity var(--t-base);
+  flex-shrink: 0;
+}
+
+.client-strip__logo:hover {
+  filter: none;
+  opacity: 0.9;
+}
+
+@keyframes strip-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .project-card__thumb--orange { border-top: 3px solid var(--orange); }
