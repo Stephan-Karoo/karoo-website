@@ -15,14 +15,15 @@
   max-width: 1160px;
   border-radius: var(--r-pill);
   padding: 0.6rem 0.75rem;
-  transition: background var(--t-slow), backdrop-filter var(--t-slow), box-shadow var(--t-slow);
+  background: rgba(27, 30, 35, 0.92);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+  transition: box-shadow var(--t-slow), padding var(--t-slow);
 }
 
 .navbar--scrolled {
-  background: rgba(27, 30, 35, 0.88);
-  backdrop-filter: blur(24px) saturate(1.4);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
-  box-shadow: 0 4px 40px rgba(0,0,0,0.22);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.28);
 }
 
 .navbar__inner {
@@ -38,15 +39,16 @@
   align-items: center;
 }
 
+/* Large logo by default, shrinks smoothly on scroll */
 .navbar__logo img {
-  height: 36px;
+  height: 64px;
   width: auto;
+  display: block;
+  transition: height 0.35s ease, opacity var(--t-fast);
 }
 
-/* Logo image sizing in navbar */
-.navbar__logo img {
-  display: block;
-  transition: opacity var(--t-fast);
+.navbar--scrolled .navbar__logo img {
+  height: 36px;
 }
 
 .navbar__logo img:hover {
@@ -72,6 +74,11 @@
   gap: 0.25rem;
 }
 
+/* Sliding brand-colour underline on hover */
+.navbar__links li {
+  position: relative;
+}
+
 .navbar__links a {
   font-family: var(--font-ui);
   font-size: 0.85rem;
@@ -80,11 +87,38 @@
   padding: 0.5rem 0.9rem;
   border-radius: var(--r-pill);
   transition: color var(--t-fast), background var(--t-fast);
+  position: relative;
+  overflow: hidden;
 }
+
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0.9rem;
+  right: 0.9rem;
+  height: 2px;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.navbar__links a:hover::after,
+.navbar__links a.active::after {
+  transform: scaleX(1);
+}
+
+/* Brand colour per nav item */
+.navbar__links li:nth-child(1) a::after { background: var(--orange); }
+.navbar__links li:nth-child(2) a::after { background: var(--red); }
+.navbar__links li:nth-child(3) a::after { background: var(--green); }
+.navbar__links li:nth-child(4) a::after { background: var(--blue); }
+.navbar__links li:nth-child(5) a::after { background: var(--orange); }
 
 .navbar__links a:hover {
   color: var(--white);
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
 }
 
 .navbar__links a.active {
@@ -155,24 +189,24 @@
   }
 }
 
-/* ── Hero — DARK ─────────────────────────────────────────── */
+/* ── Hero — LIGHT (navbar stays dark above it) ───────────── */
 .hero {
   min-height: 100svh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--deep-slate);
+  background-color: var(--parchment);
   padding-block: var(--s8) var(--s7);
 }
 
-/* Layer 1: Halftone dot grid (light on dark) */
+/* Layer 1: Halftone dot grid */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(245,242,237,0.07) 1px, transparent 1px);
+    radial-gradient(circle, rgba(40,40,40,0.07) 1px, transparent 1px);
   background-size: 22px 22px;
   pointer-events: none;
 }
@@ -187,8 +221,8 @@
       -45deg,
       transparent,
       transparent 14px,
-      rgba(165,100,50,0.06) 14px,
-      rgba(165,100,50,0.06) 15px
+      rgba(165,100,50,0.035) 14px,
+      rgba(165,100,50,0.035) 15px
     );
   pointer-events: none;
 }
@@ -201,7 +235,7 @@
   width: clamp(220px, 30vw, 420px);
   height: clamp(220px, 30vw, 420px);
   background: var(--orange);
-  opacity: 0.10;
+  opacity: 0.06;
   clip-path: polygon(100% 0, 0 0, 100% 100%);
   pointer-events: none;
 }
@@ -217,12 +251,12 @@
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(245,242,237,0.3);
+  color: var(--text-subtle);
   margin-bottom: var(--s3);
 }
 
 .hero__heading {
-  color: var(--parchment);
+  color: var(--auth-black);
   font-size: clamp(3.2rem, 8.5vw, 7rem);
   line-height: 1.0;
   font-weight: 700;
@@ -238,7 +272,7 @@
 
 .hero__body {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: rgba(245,242,237,0.6);
+  color: var(--text-muted);
   max-width: 56ch;
   line-height: 1.7;
   margin-bottom: var(--s5);
@@ -252,12 +286,12 @@
 }
 
 .hero__actions .btn--secondary {
-  color: var(--parchment);
-  border-color: rgba(245,242,237,0.22);
+  color: var(--auth-black);
+  border-color: rgba(40,40,40,0.22);
 }
 
 .hero__actions .btn--secondary:hover {
-  border-color: var(--parchment);
+  border-color: var(--auth-black);
 }
 
 .hero__status {
@@ -267,7 +301,7 @@
   font-family: var(--font-ui);
   font-size: 0.78rem;
   font-weight: 500;
-  color: rgba(245,242,237,0.3);
+  color: var(--text-subtle);
   letter-spacing: 0.06em;
 }
 
@@ -278,7 +312,7 @@
   bottom: -10%;
   width: clamp(300px, 45vw, 600px);
   aspect-ratio: 1;
-  border: 1px solid rgba(165,100,50,0.18);
+  border: 1px solid rgba(165,100,50,0.14);
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -288,7 +322,7 @@
   content: '';
   position: absolute;
   inset: 10%;
-  border: 1px solid rgba(165,100,50,0.1);
+  border: 1px solid rgba(165,100,50,0.08);
   border-radius: 50%;
 }
 
@@ -323,7 +357,7 @@
   z-index: 1;
 }
 
-/* Dark separator between bands */
+/* Parchment separator between bands (matches light hero bg) */
 .hero__colourbar span:not(:last-child)::before {
   content: '';
   position: absolute;
@@ -331,7 +365,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--deep-slate);
+  background: var(--parchment);
   z-index: 2;
 }
 
