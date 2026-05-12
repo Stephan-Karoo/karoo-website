@@ -136,6 +136,18 @@
   checkNext();
 })();
 
+/* ── Project card shuffle (Fisher-Yates) ────────────────── */
+(function shuffleProofGrid() {
+  const grid = document.querySelector('.proof__grid');
+  if (!grid) return;
+  const cards = Array.from(grid.children);
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[j]] = [cards[j], cards[i]];
+  }
+  cards.forEach(card => grid.appendChild(card));
+})();
+
 /* ── Smooth scroll for anchor links ─────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {

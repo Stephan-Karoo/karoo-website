@@ -292,9 +292,33 @@
   border-radius: 50%;
 }
 
+/* Hero left vertical colour bar */
+.hero__colourbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 52px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+}
+
+.hero__colourbar span {
+  flex: 1;
+}
+
+.hero__colourbar span:nth-child(1) { background: var(--orange); }
+.hero__colourbar span:nth-child(2) { background: var(--red); }
+.hero__colourbar span:nth-child(3) { background: var(--green); }
+.hero__colourbar span:nth-child(4) { background: var(--blue); }
+
 @media (max-width: 768px) {
   .hero__heading { font-size: clamp(2.5rem, 10vw, 4rem); }
   .hero { padding-top: var(--s7); }
+  .hero__colourbar { width: 32px; }
 }
 
 /* ── Division Colour Bar ─────────────────────────────────── */
@@ -488,8 +512,16 @@
 
 /* ── Feature Widgets ─────────────────────────────────────── */
 .features {
-  background: var(--bg-raised);
+  background: var(--deep-slate);
   padding-block: var(--s7);
+}
+
+.features .section-label {
+  color: rgba(245,242,237,0.3);
+}
+
+.features h2 {
+  color: var(--parchment);
 }
 
 .features__header {
@@ -818,7 +850,7 @@
 }
 
 .project-card__thumb {
-  aspect-ratio: 16/10;
+  aspect-ratio: 1/1;
   background: var(--bg-raised);
   position: relative;
   overflow: hidden;
@@ -830,15 +862,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
 }
 
 .project-card__thumb-inner img {
-  max-width: 75%;
-  max-height: 75%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   filter: grayscale(15%);
   transition: filter var(--t-base), transform var(--t-base);
 }
@@ -868,6 +898,15 @@
 
 .client-strip .container {
   margin-bottom: var(--s3);
+}
+
+.client-strip .section-label {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--text-muted);
 }
 
 .client-strip__track-wrap {
@@ -909,12 +948,12 @@
 }
 
 .client-strip__logo {
-  height: 44px;
+  height: 64px;
   width: auto;
-  max-width: 120px;
+  max-width: 160px;
   object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.45;
+  opacity: 0.55;
   transition: filter var(--t-base), opacity var(--t-base);
   flex-shrink: 0;
 }
@@ -1340,6 +1379,37 @@
   .footer__top {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── Pre-footer accent band ──────────────────────────────── */
+.pre-footer {
+  background: var(--deep-slate);
+  height: 96px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pre-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(245,242,237,0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pre-footer__blue-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 55%;
+  background: var(--blue);
+  opacity: 0.28;
+  clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* ── Page-specific: Hero variations — LIGHT MODE ─────────── */
