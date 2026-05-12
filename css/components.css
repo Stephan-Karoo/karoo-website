@@ -460,7 +460,7 @@
 
 /* ── Division Cards ──────────────────────────────────────── */
 .divisions {
-  background: var(--parchment);
+  background: var(--bg-raised);
   padding-block: var(--s7);
 }
 
@@ -1201,6 +1201,28 @@
 .contact-section {
   background: var(--deep-slate);
   padding-block: var(--s7);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Triangle decorates the bottom-left — floats behind content */
+.contact-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 420px;
+  height: 420px;
+  background: #2E4A6F;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure form content sits above triangle */
+.contact-section__inner {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-section__inner {
@@ -1481,7 +1503,7 @@
 /* ── Pre-footer accent band ──────────────────────────────── */
 .pre-footer {
   background: var(--deep-slate);
-  height: 420px;
+  height: 60px;
   position: relative;
   overflow: hidden;
 }
@@ -1496,24 +1518,8 @@
   z-index: 0;
 }
 
-/* Large equal-leg right triangle — bottom-left corner */
-.pre-footer__blue-panel {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 420px;
-  height: 420px;
-  background: #2E4A6F;
-  clip-path: polygon(0 0, 0 100%, 100% 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
 @media (max-width: 768px) {
-  .pre-footer {
-    height: 260px;
-  }
-  .pre-footer__blue-panel {
+  .contact-section::before {
     width: 260px;
     height: 260px;
   }
