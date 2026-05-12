@@ -5,24 +5,37 @@
    ============================================================ */
 
 /* ── Navbar ──────────────────────────────────────────────── */
+/* Always centred via left+translate — only width/radius/top change */
 .navbar {
   position: fixed;
-  top: 1.25rem;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  padding: 0.9rem 2.5rem;
+  background: rgba(27, 30, 35, 0.96);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+  transition:
+    top 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    max-width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Scrolled: shrink to centred pill */
+.navbar--scrolled {
+  top: 1.25rem;
   width: calc(100% - 3rem);
   max-width: 1160px;
   border-radius: var(--r-pill);
   padding: 0.6rem 0.75rem;
-  background: rgba(27, 30, 35, 0.92);
-  backdrop-filter: blur(24px) saturate(1.4);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
-  box-shadow: 0 4px 40px rgba(0,0,0,0.18);
-  transition: box-shadow var(--t-slow), padding var(--t-slow);
-}
-
-.navbar--scrolled {
   box-shadow: 0 4px 40px rgba(0,0,0,0.28);
 }
 
@@ -232,10 +245,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: clamp(220px, 30vw, 420px);
-  height: clamp(220px, 30vw, 420px);
+  width: clamp(320px, 45vw, 620px);
+  height: clamp(320px, 45vw, 620px);
   background: var(--orange);
-  opacity: 0.06;
+  opacity: 0.14;
   clip-path: polygon(100% 0, 0 0, 100% 100%);
   pointer-events: none;
 }
@@ -1468,7 +1481,7 @@
 /* ── Pre-footer accent band ──────────────────────────────── */
 .pre-footer {
   background: var(--deep-slate);
-  height: 180px;
+  height: 420px;
   position: relative;
   overflow: hidden;
 }
@@ -1483,13 +1496,13 @@
   z-index: 0;
 }
 
-/* Even right triangle — equal legs, bottom-left corner */
+/* Large equal-leg right triangle — bottom-left corner */
 .pre-footer__blue-panel {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 180px;
-  height: 180px;
+  width: 420px;
+  height: 420px;
   background: #2E4A6F;
   clip-path: polygon(0 0, 0 100%, 100% 100%);
   pointer-events: none;
@@ -1498,11 +1511,11 @@
 
 @media (max-width: 768px) {
   .pre-footer {
-    height: 120px;
+    height: 260px;
   }
   .pre-footer__blue-panel {
-    width: 120px;
-    height: 120px;
+    width: 260px;
+    height: 260px;
   }
 }
 
