@@ -2009,23 +2009,24 @@
   .service-list { grid-template-columns: 1fr; }
 }
 
-/* Unified service card (right column) */
+/* Service card — flex column of 3 separate elements */
 .service-card {
+  position: sticky;
+  top: calc(80px + var(--s4));
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+/* Separate logo card */
+.service-card__logo-area {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  overflow: hidden;
-  position: sticky;
-  top: calc(80px + var(--s4));
-}
-
-.service-card__logo-area {
   padding: var(--s5) var(--s4);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
 }
 
 .service-card__logo-area img {
@@ -2035,27 +2036,26 @@
   display: block;
 }
 
+/* Separate stats card — NO internal cell borders */
 .service-card__stats {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: var(--s4);
+  gap: var(--s3) var(--s4);
 }
 
 .service-card__stat {
-  padding: var(--s3) var(--s3);
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  gap: 0.2rem;
 }
-
-.service-card__stat:nth-child(even)  { border-right: none; }
-.service-card__stat:nth-child(3),
-.service-card__stat:nth-child(4)     { border-bottom: none; }
 
 .service-card__stat-num {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.03em;
@@ -2072,6 +2072,7 @@
   line-height: 1.4;
 }
 
+/* Pill CTA sits below both cards */
 .service-card__cta {
   display: block;
   padding: 1rem var(--s4);
@@ -2082,8 +2083,8 @@
   font-weight: 600;
   text-align: center;
   text-decoration: none;
+  border-radius: var(--r-pill);
   transition: background var(--t-fast), color var(--t-fast);
-  border-top: 1px solid var(--border);
 }
 
 .service-card__cta:hover {
@@ -2091,18 +2092,47 @@
   color: var(--white);
 }
 
-/* Dark card variant — AI Automation */
-.service-section--ai .service-card {
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.07);
+/* Section accent line via ::after — sits flush at section boundary */
+.service-section--media::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--orange);
 }
 
+.service-section--marketing::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--red);
+}
+
+.service-section--it::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--green);
+}
+
+.service-section--ai::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--blue);
+}
+
+/* Dark card variant — AI Automation */
 .service-section--ai .service-card__logo-area {
   background: rgba(255,255,255,0.06);
   border-color: rgba(255,255,255,0.07);
 }
 
-.service-section--ai .service-card__stat {
+.service-section--ai .service-card__stats {
+  background: rgba(255,255,255,0.04);
   border-color: rgba(255,255,255,0.07);
 }
 
@@ -2116,20 +2146,12 @@
 
 .service-section--ai .service-card__cta {
   background: #2a4770;
-  border-color: rgba(255,255,255,0.07);
   color: rgba(245,242,237,0.85);
 }
 
 .service-section--ai .service-card__cta:hover {
   background: #35568a;
   color: var(--white);
-}
-
-.service-section__divider {
-  height: 4px;
-  width: 100%;
-  display: block;
-  margin-top: var(--s7);
 }
 
 @media (max-width: 960px) {
