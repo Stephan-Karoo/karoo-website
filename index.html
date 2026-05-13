@@ -3,41 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karoo — We engineer systems that scale. | Melbourne Digital Agency</title>
-  <meta name="description" content="Karoo is a Melbourne digital agency with four specialist divisions: Digital Media, Digital Marketing, IT Services, and AI Automation. We build the web, run the ads, hold the stack, and automate the rest.">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1B1E23">
+  <title>Digital Marketing, Websites &amp; AI Automation | Karoo Media Melbourne</title>
+  <meta name="description" content="Karoo Media helps Melbourne businesses get more leads, better websites, and smarter systems. Google Ads, Meta Ads, WordPress builds, IT support, and AI automation — all under one roof.">
+  <link rel="canonical" href="https://karoo.com.au/">
 
-  <!-- Preconnect for Google Fonts -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Karoo Media — Digital Agency Melbourne">
+  <meta property="og:description" content="Websites, ads, IT, and AI automation for Melbourne businesses. Practical systems. Real results.">
+  <meta property="og:image" content="https://karoo.com.au/images/og/karoo-og-home.jpg">
+  <meta property="og:url" content="https://karoo.com.au/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Karoo Media">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karoo Media — Digital Agency Melbourne">
+  <meta name="twitter:description" content="Websites, ads, IT, and AI automation for Melbourne businesses.">
+  <meta name="twitter:image" content="https://karoo.com.au/images/og/karoo-og-home.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Critical font preload (add your woff2 files first) -->
-  <!-- <link rel="preload" href="fonts/roslindale/RoslindaleVariable-Display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link rel="preload" href="fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
 
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
-
-  <!-- Schema: Organisation -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Karoo",
-    "url": "https://karoo.com.au",
-    "telephone": "0434636532",
-    "email": "info@karoomedia.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "27 Herbert Street",
-      "addressLocality": "St Kilda",
-      "addressRegion": "VIC",
-      "postalCode": "3182",
-      "addressCountry": "AU"
-    },
-    "sameAs": []
-  }
-  </script>
 </head>
 <body>
 
@@ -712,6 +705,60 @@
     </div>
   </div>
 </footer>
+
+<!-- ── Schema: LocalBusiness ──────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://karoo.com.au/#business",
+  "name": "Karoo Media",
+  "url": "https://karoo.com.au",
+  "logo": "https://karoo.com.au/images/logos/Karoo-LIGHT.png",
+  "image": "https://karoo.com.au/images/logos/Karoo-LIGHT.png",
+  "description": "Melbourne digital agency offering digital marketing, WordPress websites, IT services, and AI automation for small and medium businesses.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "27 Herbert Street",
+    "addressLocality": "St Kilda",
+    "addressRegion": "VIC",
+    "postalCode": "3182",
+    "addressCountry": "AU"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Victoria"
+  },
+  "telephone": "0434636532",
+  "email": "info@karoomedia.com",
+  "priceRange": "$$",
+  "knowsAbout": [
+    "Google Ads",
+    "Meta Ads",
+    "WordPress development",
+    "AI automation",
+    "IT services",
+    "n8n automation",
+    "ActiveCampaign",
+    "SEO",
+    "Microsoft 365",
+    "Make automation"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Karoo Media Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WordPress Website Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT Services" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Business Automation" } }
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/karoomedia"
+  ]
+}
+</script>
 
 <script src="js/main.js" defer></script>
 </body>

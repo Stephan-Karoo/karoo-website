@@ -3,40 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Karoo | Melbourne Digital Agency</title>
-  <meta name="description" content="Karoo is a Melbourne-based digital agency founded by Stephan Alberts. 15+ years building websites, marketing systems, IT infrastructure and AI automation for local businesses.">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1B1E23">
+  <title>About Karoo Media | Melbourne Digital Agency</title>
+  <meta name="description" content="Karoo Media is a Melbourne digital agency covering marketing, websites, IT, and AI automation. Founded by Stephan Alberts — no big agency layers, direct access, 15+ years of experience.">
+  <link rel="canonical" href="https://karoo.com.au/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Karoo Media | Melbourne Digital Agency">
+  <meta property="og:description" content="No big agency layers. Direct access to the person doing the work. 15+ years across digital marketing, web development, IT, and automation.">
+  <meta property="og:image" content="https://karoo.com.au/images/og/karoo-og-about.jpg">
+  <meta property="og:url" content="https://karoo.com.au/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Karoo Media">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Karoo Media | Melbourne Digital Agency">
+  <meta name="twitter:description" content="No big agency layers. Direct access. 15+ years experience.">
+  <meta name="twitter:image" content="https://karoo.com.au/images/og/karoo-og-about.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="preload" href="fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Karoo",
-    "url": "https://karoo.com.au",
-    "telephone": "0434636532",
-    "email": "info@karoomedia.com",
-    "founder": {
-      "@type": "Person",
-      "name": "Stephan Alberts",
-      "jobTitle": "Founder"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "27 Herbert Street",
-      "addressLocality": "St Kilda",
-      "addressRegion": "VIC",
-      "postalCode": "3182",
-      "addressCountry": "AU"
-    }
-  }
-  </script>
 </head>
 <body>
 
@@ -300,6 +295,40 @@
     </div>
   </div>
 </footer>
+
+<!-- ── Schema: About ──────────────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "https://karoo.com.au/about.html",
+  "name": "About Karoo Media",
+  "description": "Karoo Media is a Melbourne digital agency covering digital marketing, web development, IT services, and AI automation.",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Stephan Alberts",
+    "jobTitle": "Founder, Karoo Media",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Karoo Media",
+      "@id": "https://karoo.com.au/#business"
+    },
+    "knowsAbout": [
+      "Digital Marketing",
+      "Google Ads",
+      "Meta Ads",
+      "WordPress Development",
+      "AI Automation",
+      "n8n",
+      "ActiveCampaign",
+      "IT Services",
+      "Microsoft 365",
+      "Make automation"
+    ],
+    "description": "Digital marketing and automation specialist with 15+ years experience working with childcare, manufacturing, food services, eCommerce, and engineering businesses across Australia."
+  }
+}
+</script>
 
 <script src="js/main.js" defer></script>
 </body>

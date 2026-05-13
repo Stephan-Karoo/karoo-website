@@ -158,6 +158,26 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+/* ── Work page filter ────────────────────────────────────── */
+(function initWorkFilter() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards      = document.querySelectorAll('.project-card');
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.division === filter;
+        card.classList.toggle('filtered-out', !match);
+      });
+    });
+  });
+})();
+
 /* ── Form submission (placeholder) ──────────────────────── */
 (function initForms() {
   document.querySelectorAll('.js-contact-form').forEach(form => {
