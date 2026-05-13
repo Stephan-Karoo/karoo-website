@@ -26,6 +26,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="preload" href="fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
@@ -62,241 +64,281 @@
 <header class="page-hero">
   <div class="page-hero__bar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="container page-hero__inner">
-    <p class="page-hero__eyebrow">Four divisions. One studio.</p>
-    <h1 class="page-hero__heading">Systems that<br>get things done.</h1>
+    <p class="page-hero__eyebrow">Our divisions</p>
+    <h1 class="page-hero__heading">The full stack.<br>Four specialisms.</h1>
     <p class="page-hero__sub">
-      Digital marketing, websites, IT infrastructure, and AI automation —
-      each handled by a specialist who knows the work inside out.
+      Every division is a genuine discipline — built from real client work,
+      not added to a brochure. Together they cover the entire digital
+      infrastructure of a modern business, from the surface to the systems underneath it.
     </p>
   </div>
 </header>
 
-<!-- ── Division colour bar ────────────────────────────────── -->
-<div class="colour-bar" aria-hidden="true">
-  <a href="#digital-media"   class="colour-bar__seg colour-bar__seg--orange">
-    <span class="colour-bar__label">Digital Media</span>
-    <span class="colour-bar__sub">Web &amp; Content</span>
-  </a>
-  <a href="#digital-marketing" class="colour-bar__seg colour-bar__seg--red">
-    <span class="colour-bar__label">Digital Marketing</span>
-    <span class="colour-bar__sub">Ads &amp; Growth</span>
-  </a>
-  <a href="#it-services"     class="colour-bar__seg colour-bar__seg--green">
-    <span class="colour-bar__label">IT Services</span>
-    <span class="colour-bar__sub">Cloud &amp; Hosting</span>
-  </a>
-  <a href="#ai-automation"   class="colour-bar__seg colour-bar__seg--blue">
-    <span class="colour-bar__label">AI Automation</span>
-    <span class="colour-bar__sub">Agents &amp; n8n</span>
-  </a>
-</div>
+<!-- ── Division nav strip ─────────────────────────────────── -->
+<nav class="division-nav" aria-label="Jump to division">
+  <div class="division-nav__inner">
+    <a href="#digital-media"    class="division-nav__item division-nav__item--orange">Digital Media</a>
+    <a href="#digital-marketing" class="division-nav__item division-nav__item--red">Digital Marketing</a>
+    <a href="#it-services"      class="division-nav__item division-nav__item--green">IT Services</a>
+    <a href="#ai-automation"    class="division-nav__item division-nav__item--blue">AI Automation</a>
+  </div>
+</nav>
 
-<!-- ── Digital Media ──────────────────────────────────────── -->
-<section class="service-section" id="digital-media" aria-labelledby="media-heading">
-  <div class="service-section__divider" style="background:var(--orange);"></div>
+<!-- ══════════════════════════════════════════════════════════
+     DIGITAL MEDIA
+════════════════════════════════════════════════════════════ -->
+<section class="service-section service-section--media" id="digital-media" aria-labelledby="media-heading">
   <div class="container">
     <div class="service-section__inner">
 
       <!-- Content -->
       <div class="service-section__content reveal">
         <p class="section-label" style="color:var(--orange);">Digital Media</p>
-        <h2 id="media-heading">Websites and content<br>that actually convert.</h2>
+        <h2 id="media-heading">Build the surface.</h2>
         <p class="service-section__desc">
-          We build WordPress websites that load fast, rank in search, and give your
-          team full control. From a single landing page to a multi-location business
-          site — designed to convert visitors, not just look good.
+          Your website is the first thing people judge you on — and the last thing most
+          agencies maintain properly. We build sites that perform visually and
+          technically, then stay on the account so they keep performing.
         </p>
         <ul class="service-list" aria-label="Digital Media services">
-          <li>WordPress website design &amp; development</li>
-          <li>Landing pages and conversion funnels</li>
-          <li>Photography and video production</li>
-          <li>Brand identity and graphic design</li>
-          <li>Copywriting and content strategy</li>
-          <li>Hosting, updates, and maintenance</li>
+          <li>Custom website design &amp; development</li>
+          <li>WordPress with ACF Pro &amp; Kadence</li>
+          <li>Webflow &amp; headless builds</li>
+          <li>WooCommerce &amp; online stores</li>
+          <li>Video production &amp; editing</li>
+          <li>Photography direction &amp; content</li>
+          <li>Landing pages &amp; campaign microsites</li>
+          <li>Ongoing maintenance &amp; support retainers</li>
         </ul>
-        <a href="contact.html" class="btn btn--primary btn--magnetic" style="margin-top:var(--s4);">Talk to Digital Media →</a>
       </div>
 
-      <!-- Visual -->
+      <!-- Unified service card -->
       <div class="service-section__visual reveal reveal--delay-1">
-        <img src="images/logos/Karoo-digital-media-dark.png"
-             alt="Karoo Digital Media division"
-             class="service-section__logo"
-             loading="lazy">
-        <div class="stats-panel" role="list" aria-label="Digital Media stats">
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">60+</span>
-            <span class="stat-label">Websites delivered</span>
+        <div class="service-card">
+          <div class="service-card__logo-area">
+            <img src="images/logos/Karoo-digital-media-dark.png"
+                 alt="Karoo Digital Media" loading="lazy">
           </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">15+</span>
-            <span class="stat-label">Years building</span>
+          <div class="service-card__stats" role="list" aria-label="Digital Media stats">
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">30</span>
+              <span class="service-card__stat-label">Websites built</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">15<sup style="font-size:0.5em;vertical-align:super;">yrs</sup></span>
+              <span class="service-card__stat-label">In WordPress</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">2–4</span>
+              <span class="service-card__stat-label">Week delivery</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">100<sup style="font-size:0.5em;vertical-align:super;">%</sup></span>
+              <span class="service-card__stat-label">Client-owned code</span>
+            </div>
           </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">100%</span>
-            <span class="stat-label">Mobile optimised</span>
-          </div>
+          <a href="contact.html?division=digital-media" class="service-card__cta btn--magnetic">
+            Start a web project →
+          </a>
         </div>
       </div>
 
     </div>
   </div>
+  <div class="service-section__divider" style="background:var(--orange);"></div>
 </section>
 
-<!-- ── Digital Marketing ──────────────────────────────────── -->
-<section class="service-section service-section--raised" id="digital-marketing" aria-labelledby="marketing-heading">
-  <div class="service-section__divider" style="background:var(--red);"></div>
+<!-- ══════════════════════════════════════════════════════════
+     DIGITAL MARKETING
+════════════════════════════════════════════════════════════ -->
+<section class="service-section service-section--raised service-section--marketing" id="digital-marketing" aria-labelledby="marketing-heading">
   <div class="container">
     <div class="service-section__inner">
 
-      <!-- Visual first → appears on left -->
-      <div class="service-section__visual reveal">
-        <img src="images/logos/Karoo-digital-marketing-dark.png"
-             alt="Karoo Digital Marketing division"
-             class="service-section__logo"
-             loading="lazy">
-        <div class="stats-panel" role="list" aria-label="Digital Marketing stats">
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">3.2×</span>
-            <span class="stat-label">Avg ROAS improvement</span>
-          </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">40%</span>
-            <span class="stat-label">Lower cost per lead</span>
-          </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">24+</span>
-            <span class="stat-label">Active campaigns</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Content -->
-      <div class="service-section__content reveal reveal--delay-1">
+      <div class="service-section__content reveal">
         <p class="section-label" style="color:var(--red);">Digital Marketing</p>
-        <h2 id="marketing-heading">Ads that bring<br>real enquiries.</h2>
+        <h2 id="marketing-heading">Drive the demand.</h2>
         <p class="service-section__desc">
-          We run Google Ads and Meta Ads campaigns focused on cost per lead and
-          qualified enquiries — not vanity metrics. Clear tracking, plain-English
-          reporting, and no fluff.
+          Ads that don't have clear measurement don't have clear accountability.
+          We run Google and Meta campaigns with full tracking scaffolding from day one
+          — so you know exactly what's working and what isn't.
         </p>
         <ul class="service-list" aria-label="Digital Marketing services">
-          <li>Google Ads (Search, Display, Performance Max)</li>
-          <li>Meta Ads (Facebook &amp; Instagram)</li>
-          <li>SEO and organic search strategy</li>
-          <li>Email marketing and nurture sequences</li>
-          <li>ActiveCampaign CRM setup and automation</li>
-          <li>Monthly performance reporting</li>
+          <li>Google Ads — Search, Display &amp; Shopping</li>
+          <li>Meta Ads — Facebook &amp; Instagram</li>
+          <li>GA4 &amp; conversion tracking setup</li>
+          <li>ActiveCampaign email &amp; automation</li>
+          <li>Conversion rate optimisation</li>
+          <li>Monthly performance dashboards</li>
+          <li>LinkedIn &amp; YouTube Ads</li>
+          <li>Retargeting &amp; audience builds</li>
         </ul>
-        <a href="contact.html" class="btn btn--primary btn--magnetic" style="margin-top:var(--s4);">Talk to Digital Marketing →</a>
+      </div>
+
+      <!-- Unified service card -->
+      <div class="service-section__visual reveal reveal--delay-1">
+        <div class="service-card">
+          <div class="service-card__logo-area">
+            <img src="images/logos/Karoo-digital-marketing-dark.png"
+                 alt="Karoo Digital Marketing" loading="lazy">
+          </div>
+          <div class="service-card__stats" role="list" aria-label="Digital Marketing stats">
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">$1.2M</span>
+              <span class="service-card__stat-label">Ad spend managed</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">3</span>
+              <span class="service-card__stat-label">Avg ROAS improvement</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">20</span>
+              <span class="service-card__stat-label">Active campaigns</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">Full</span>
+              <span class="service-card__stat-label">Tracking from day 1</span>
+            </div>
+          </div>
+          <a href="contact.html?division=digital-marketing" class="service-card__cta btn--magnetic">
+            Start a campaign →
+          </a>
+        </div>
       </div>
 
     </div>
   </div>
+  <div class="service-section__divider" style="background:var(--red);"></div>
 </section>
 
-<!-- ── IT Services ────────────────────────────────────────── -->
-<section class="service-section" id="it-services" aria-labelledby="it-heading">
-  <div class="service-section__divider" style="background:var(--green);"></div>
+<!-- ══════════════════════════════════════════════════════════
+     IT SERVICES
+════════════════════════════════════════════════════════════ -->
+<section class="service-section service-section--it" id="it-services" aria-labelledby="it-heading">
   <div class="container">
     <div class="service-section__inner">
 
       <!-- Content -->
       <div class="service-section__content reveal">
         <p class="section-label" style="color:var(--green);">IT Services</p>
-        <h2 id="it-heading">Cloud, email,<br>and infrastructure.</h2>
+        <h2 id="it-heading">Hold the stack.</h2>
         <p class="service-section__desc">
-          We set up and manage Microsoft 365, cloud backups, and IT infrastructure
-          for small businesses. Reliable support without enterprise overhead —
-          direct access to the person doing the work.
+          Infrastructure is invisible when it's working and catastrophic when it isn't.
+          We manage cloud hosting, security, and IT support for Melbourne businesses
+          that can't afford downtime — with monitoring that alerts you before it alerts you.
         </p>
         <ul class="service-list" aria-label="IT Services offered">
-          <li>Microsoft 365 setup and migration</li>
-          <li>Cloud backup and disaster recovery</li>
-          <li>Email setup and domain configuration</li>
-          <li>Network and workstation setup</li>
-          <li>Ongoing IT support and management</li>
-          <li>Security audits and compliance basics</li>
+          <li>Managed WordPress hosting (cloud)</li>
+          <li>Domain &amp; DNS management</li>
+          <li>SSL, security hardening &amp; backups</li>
+          <li>Uptime monitoring &amp; incident response</li>
+          <li>Google Workspace &amp; Microsoft 365</li>
+          <li>VPN, networking &amp; remote access</li>
+          <li>Small business IT support &amp; consulting</li>
+          <li>Server migrations &amp; site moves</li>
         </ul>
-        <a href="contact.html" class="btn btn--primary btn--magnetic" style="margin-top:var(--s4);">Talk to IT Services →</a>
       </div>
 
-      <!-- Visual -->
+      <!-- Unified service card -->
       <div class="service-section__visual reveal reveal--delay-1">
-        <img src="images/logos/Karoo-it-services-dark.png"
-             alt="Karoo IT Services division"
-             class="service-section__logo"
-             loading="lazy">
-        <div class="stats-panel" role="list" aria-label="IT Services stats">
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">99.9%</span>
-            <span class="stat-label">Uptime target</span>
+        <div class="service-card">
+          <div class="service-card__logo-area">
+            <img src="images/logos/Karoo-it-services-dark.png"
+                 alt="Karoo IT Services" loading="lazy">
           </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">M365</span>
-            <span class="stat-label">Specialists</span>
+          <div class="service-card__stats" role="list" aria-label="IT Services stats">
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">99.9<sup style="font-size:0.45em;vertical-align:super;">%</sup></span>
+              <span class="service-card__stat-label">Uptime SLA</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">24<sup style="font-size:0.5em;vertical-align:super;">hr</sup></span>
+              <span class="service-card__stat-label">Support response</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">50</span>
+              <span class="service-card__stat-label">Sites hosted</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">Daily</span>
+              <span class="service-card__stat-label">Automated backups</span>
+            </div>
           </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">Same</span>
-            <span class="stat-label">Day response</span>
-          </div>
+          <a href="contact.html?division=it-services" class="service-card__cta btn--magnetic">
+            Discuss hosting →
+          </a>
         </div>
       </div>
 
     </div>
   </div>
+  <div class="service-section__divider" style="background:var(--green);"></div>
 </section>
 
-<!-- ── AI Automation (dark) ───────────────────────────────── -->
+<!-- ══════════════════════════════════════════════════════════
+     AI AUTOMATION — dark mode
+════════════════════════════════════════════════════════════ -->
 <section class="service-section service-section--ai" id="ai-automation" aria-labelledby="ai-heading">
-  <div class="service-section__divider" style="background:var(--blue);"></div>
   <div class="container">
     <div class="service-section__inner">
 
-      <!-- Visual first → appears on left -->
-      <div class="service-section__visual reveal">
-        <img src="images/logos/Karoo-ai-automation-light.png"
-             alt="Karoo AI Automation division"
-             class="service-section__logo"
-             loading="lazy">
-        <div class="stats-panel stats-panel--dark" role="list" aria-label="AI Automation stats">
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">n8n</span>
-            <span class="stat-label">Primary platform</span>
-          </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Live automations</span>
-          </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-num">Zero</span>
-            <span class="stat-label">Manual hand-off</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Content -->
-      <div class="service-section__content reveal reveal--delay-1">
-        <p class="section-label" style="color:rgba(100,140,200,0.8);">AI Automation</p>
-        <h2 id="ai-heading">Systems that run<br>while you sleep.</h2>
+      <div class="service-section__content reveal">
+        <p class="section-label" style="color:#5b87be;">AI Automation</p>
+        <h2 id="ai-heading">Automate the rest.</h2>
         <p class="service-section__desc">
-          We build workflow automations that connect your tools, move your data,
-          and trigger actions without anyone touching anything. Lead capture to CRM.
-          Review follow-ups. Booking notifications. Internal task routing.
+          Most businesses are sitting on thousands of hours of manual work that
+          could be running automatically right now. We map the workflows, build the
+          integrations, and deploy AI agents that handle the repetitive operations —
+          so your team works on what actually matters.
         </p>
         <ul class="service-list" aria-label="AI Automation services">
-          <li>n8n and Make workflow automation</li>
-          <li>AI-powered lead qualification</li>
-          <li>CRM integration and data sync</li>
-          <li>Review and follow-up sequences</li>
-          <li>API integrations and webhooks</li>
-          <li>Internal operations and task routing</li>
+          <li>n8n workflow design &amp; deployment</li>
+          <li>Make.com (Integromat) automations</li>
+          <li>AI agent builds (OpenAI, Claude, custom)</li>
+          <li>CRM &amp; lead pipeline automation</li>
+          <li>Document processing &amp; extraction</li>
+          <li>Reporting &amp; data pipelines</li>
+          <li>Custom API &amp; webhook integrations</li>
+          <li>Zapier migration &amp; stack consolidation</li>
         </ul>
-        <a href="contact.html" class="btn btn--secondary btn--magnetic" style="margin-top:var(--s4); color:rgba(245,242,237,0.8); border-color:rgba(245,242,237,0.2);">Talk to AI Automation →</a>
+      </div>
+
+      <!-- Unified service card (dark) -->
+      <div class="service-section__visual reveal reveal--delay-1">
+        <div class="service-card">
+          <div class="service-card__logo-area">
+            <img src="images/logos/Karoo-ai-automation-light.png"
+                 alt="Karoo AI Automation" loading="lazy">
+          </div>
+          <div class="service-card__stats" role="list" aria-label="AI Automation stats">
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">5k</span>
+              <span class="service-card__stat-label">Hours automated</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">50</span>
+              <span class="service-card__stat-label">Workflows deployed</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">3</span>
+              <span class="service-card__stat-label">Day avg setup</span>
+            </div>
+            <div class="service-card__stat" role="listitem">
+              <span class="service-card__stat-num">You</span>
+              <span class="service-card__stat-label">Own every workflow</span>
+            </div>
+          </div>
+          <a href="contact.html?division=ai-automation" class="service-card__cta btn--magnetic">
+            Map an automation →
+          </a>
+        </div>
       </div>
 
     </div>
   </div>
+  <div class="service-section__divider" style="background:var(--blue);"></div>
 </section>
 
 <!-- ── FAQ ────────────────────────────────────────────────── -->
@@ -343,16 +385,12 @@
 <!-- ── CTA Band ────────────────────────────────────────────── -->
 <section class="cta-band" aria-labelledby="cta-heading">
   <div class="container">
-    <div class="cta-band__inner">
-      <p class="cta-band__eyebrow">Ready to start</p>
-      <h2 class="cta-band__heading" id="cta-heading">Tell us what<br>you're building.</h2>
-      <p class="cta-band__body">
-        Send a brief and we'll come back to you within one business day
-        with a clear next step — no pitch decks, no hard sell.
-      </p>
-      <div class="cta-band__actions">
-        <a href="contact.html" class="btn btn--primary btn--magnetic">Send a brief →</a>
-        <a href="work.html" class="btn btn--secondary">See our work</a>
+    <div class="cta-band__inner" style="align-items:center; text-align:center; max-width:100%;">
+      <p class="cta-band__eyebrow">Ready to begin?</p>
+      <h2 class="cta-band__heading" id="cta-heading">Tell us what needs building.</h2>
+      <div class="cta-band__actions" style="justify-content:center;">
+        <a href="contact.html" class="btn btn--primary btn--magnetic">Start a project →</a>
+        <a href="work.html"    class="btn btn--secondary">See our work →</a>
       </div>
     </div>
   </div>
@@ -363,12 +401,11 @@
   <div class="container">
     <div class="footer__top">
       <div>
-        <img src="images/logos/Karoo-LIGHT.png" alt="Karoo" class="footer__logo"
-             style="filter:invert(1) brightness(0.25);"
-             onerror="this.removeAttribute('style')">
+        <img src="images/logos/Karoo-LIGHT.png" alt="Karoo Digital Systems" class="footer__logo"
+             style="filter:invert(1) brightness(0.25);" onerror="this.removeAttribute('style')">
         <p class="footer__brand-tagline">We engineer systems that scale.</p>
         <p class="footer__brand-desc">
-          St Kilda, Melbourne VIC 3182<br>
+          27 Herbert Street, St Kilda VIC 3182<br>
           <a href="tel:0434636532" style="color:inherit;">0434 636 532</a><br>
           <a href="mailto:info@karoomedia.com" style="color:inherit;">info@karoomedia.com</a>
         </p>
