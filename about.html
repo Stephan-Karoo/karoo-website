@@ -14,27 +14,45 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
 
+  <!-- Schema: WebPage + Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Karoo",
-    "url": "https://karoo.com.au",
-    "telephone": "0434636532",
-    "email": "info@karoomedia.com",
-    "founder": {
-      "@type": "Person",
-      "name": "Stephan Alberts",
-      "jobTitle": "Founder"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "27 Herbert Street",
-      "addressLocality": "St Kilda",
-      "addressRegion": "VIC",
-      "postalCode": "3182",
-      "addressCountry": "AU"
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://karoo.com.au/about.html",
+        "url": "https://karoo.com.au/about.html",
+        "name": "About — Karoo | Melbourne Digital Agency",
+        "description": "Karoo is a Melbourne-based digital agency founded by Stephan Alberts. 15+ years building websites, marketing systems, IT infrastructure and AI automation for local businesses.",
+        "isPartOf": {"@id": "https://karoo.com.au/#website"},
+        "about": {"@id": "https://karoo.com.au/#stephan"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://karoo.com.au/#stephan",
+        "name": "Stephan Alberts",
+        "jobTitle": "Founder & Digital Systems Specialist",
+        "description": "Stephan Alberts has 15+ years of experience across digital marketing, AI automation, and web development, helping Melbourne businesses build scalable digital systems.",
+        "image": "https://karoo.com.au/images/StephanAlberts.jpg",
+        "sameAs": "https://au.linkedin.com/in/stephan-alberts-karoomedia",
+        "worksFor": {"@id": "https://karoo.com.au/#organization"},
+        "knowsAbout": [
+          "AI automation",
+          "n8n workflow automation",
+          "Make.com",
+          "Google Ads",
+          "Meta Ads",
+          "WordPress",
+          "Microsoft 365",
+          "ActiveCampaign",
+          "digital marketing",
+          "SEO",
+          "lead generation",
+          "web development"
+        ]
+      }
+    ]
   }
   </script>
 </head>

@@ -14,28 +14,64 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
 
+  <!-- Schema: WebPage + LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Karoo",
-    "url": "https://karoo.com.au",
-    "telephone": "0434636532",
-    "email": "info@karoomedia.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "27 Herbert Street",
-      "addressLocality": "St Kilda",
-      "addressRegion": "VIC",
-      "postalCode": "3182",
-      "addressCountry": "AU"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-37.8576",
-      "longitude": "144.9829"
-    },
-    "openingHours": "Mo-Fr 09:00-17:00"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://karoo.com.au/contact.html",
+        "url": "https://karoo.com.au/contact.html",
+        "name": "Contact — Karoo | Start a Project | Melbourne",
+        "description": "Ready to build? Send us a brief or call Stephan directly. 27 Herbert Street, St Kilda VIC 3182. +61 434 636 532. hello@karoo.com.au.",
+        "isPartOf": {"@id": "https://karoo.com.au/#website"},
+        "about": {"@id": "https://karoo.com.au/#organization"}
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://karoo.com.au/#organization",
+        "name": "Karoo Digital Systems",
+        "alternateName": ["Karoo Media", "Karoo Media Pty Ltd", "Karoo"],
+        "url": "https://karoo.com.au",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://karoo.com.au/images/logos/Karoo.png"
+        },
+        "telephone": "+61434636532",
+        "email": "hello@karoo.com.au",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "27 Herbert Street",
+          "addressLocality": "St Kilda",
+          "addressRegion": "VIC",
+          "postalCode": "3182",
+          "addressCountry": "AU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.8616,
+          "longitude": 144.9803
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:30"
+          }
+        ],
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Melbourne, Victoria, Australia"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/74157280",
+          "https://www.facebook.com/karoomedia"
+        ]
+      }
+    ]
   }
   </script>
 </head>

@@ -18,24 +18,137 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
 
-  <!-- Schema: Organisation -->
+  <!-- Schema: Organisation + LocalBusiness + WebSite + WebPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Karoo",
-    "url": "https://karoo.com.au",
-    "telephone": "0434636532",
-    "email": "info@karoomedia.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "27 Herbert Street",
-      "addressLocality": "St Kilda",
-      "addressRegion": "VIC",
-      "postalCode": "3182",
-      "addressCountry": "AU"
-    },
-    "sameAs": []
+    "@graph": [
+      {
+        "@type": ["Organization", "LocalBusiness"],
+        "@id": "https://karoo.com.au/#organization",
+        "name": "Karoo Digital Systems",
+        "alternateName": ["Karoo Media", "Karoo Media Pty Ltd", "Karoo"],
+        "url": "https://karoo.com.au",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://karoo.com.au/images/logos/Karoo.png"
+        },
+        "telephone": "+61434636532",
+        "email": "hello@karoo.com.au",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "27 Herbert Street",
+          "addressLocality": "St Kilda",
+          "addressRegion": "VIC",
+          "postalCode": "3182",
+          "addressCountry": "AU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.8616,
+          "longitude": 144.9803
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://karoo.com.au/#stephan",
+          "name": "Stephan Alberts",
+          "jobTitle": "Founder & Digital Systems Specialist",
+          "sameAs": "https://au.linkedin.com/in/stephan-alberts-karoomedia"
+        },
+        "foundingDate": "2020",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:30"
+          }
+        ],
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Melbourne, Victoria, Australia"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/74157280",
+          "https://www.facebook.com/karoomedia"
+        ],
+        "knowsAbout": [
+          "AI automation",
+          "n8n workflow automation",
+          "Make.com",
+          "Google Ads",
+          "Meta Ads",
+          "WordPress",
+          "Microsoft 365",
+          "ActiveCampaign",
+          "email triage systems",
+          "custom business portals",
+          "digital marketing",
+          "SEO",
+          "lead generation"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Karoo Digital Services",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "AI Automation",
+              "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Email Triage & Routing", "description": "Intelligent email triage and routing powered by n8n, Microsoft Graph, and Claude API"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Stock & Operations Portals", "description": "Custom business portals built with React and Supabase"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "n8n & Make.com Integrations", "description": "Workflow automations connecting Xero, MYOB, Shopify, Microsoft 365 and more"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "CRM Automation", "description": "ActiveCampaign and HubSpot automation and integration"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Agent Development", "description": "Custom AI agents built with Claude, OpenAI, and Gemini"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marketing Reporting Dashboards", "description": "Automated marketing reporting and analytics dashboards"}}
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Digital Marketing",
+              "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Ads Management"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Meta Ads Management"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO & Email Marketing"}}
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Websites & Digital Media",
+              "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WordPress Website Development", "description": "WordPress websites built with Kadence and ACF Pro"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Video Production & Photography"}}
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "IT Services",
+              "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Microsoft 365 Management"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Migration & Backup"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://karoo.com.au/#website",
+        "url": "https://karoo.com.au",
+        "name": "Karoo Digital Systems",
+        "publisher": {"@id": "https://karoo.com.au/#organization"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://karoo.com.au/",
+        "url": "https://karoo.com.au/",
+        "name": "Karoo — We engineer systems that scale. | Melbourne Digital Agency",
+        "description": "Karoo is a Melbourne digital agency with four specialist divisions: Digital Media, Digital Marketing, IT Services, and AI Automation. We build the web, run the ads, hold the stack, and automate the rest.",
+        "isPartOf": {"@id": "https://karoo.com.au/#website"},
+        "about": {"@id": "https://karoo.com.au/#organization"}
+      }
+    ]
   }
   </script>
 </head>
