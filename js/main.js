@@ -148,6 +148,30 @@
   cards.forEach(card => grid.appendChild(card));
 })();
 
+/* ── Work grid shuffle (Fisher-Yates) ────────────────────── */
+(function shuffleWorkGrid() {
+  const grid = document.querySelector('.work-grid');
+  if (!grid) return;
+  const items = Array.from(grid.children);
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    grid.appendChild(items[j]);
+    items.splice(j, 1);
+  }
+})();
+
+/* ── Client strip shuffle (Fisher-Yates) ────────────────── */
+(function shuffleClientStrip() {
+  const track = document.querySelector('.client-strip__track');
+  if (!track) return;
+  const logos = Array.from(track.querySelectorAll('img'));
+  for (let i = logos.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    track.appendChild(logos[j]);
+    logos.splice(j, 1);
+  }
+})();
+
 /* ── Smooth scroll for anchor links ─────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {

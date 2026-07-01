@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#1B1E23">
+  <meta name="theme-color" content="#A56432">
   <title>Digital Marketing, Websites &amp; AI Automation | Karoo Media Melbourne</title>
   <meta name="description" content="Karoo Media helps Melbourne businesses get more leads, better websites, and smarter systems. Google Ads, Meta Ads, WordPress builds, IT support, and AI automation — all under one roof.">
   <link rel="canonical" href="https://karoo.com.au/">
@@ -29,8 +29,26 @@
 
   <link rel="preload" href="fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
 
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
+
+  <!-- GA4: paste your <script> tag here -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2R2YN0DMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V2R2YN0DMT');
+</script>
 </head>
 <body>
 
@@ -44,13 +62,13 @@
 
     <ul class="navbar__links" role="list">
       <li><a href="/">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
 
-    <a href="contact.html" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
+    <a href="/contact" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
 
     <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -59,11 +77,11 @@
 
   <nav class="navbar__mobile-menu" aria-label="Mobile navigation">
     <a href="/">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="work.html">Work</a>
-    <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn--primary" style="margin-top:0.5rem; text-align:center; justify-content:center;">Start a project →</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/work">Work</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="btn btn--primary" style="margin-top:0.5rem; text-align:center; justify-content:center;">Start a project →</a>
   </nav>
 </nav>
 
@@ -71,15 +89,15 @@
 <section class="hero" id="hero">
   <div class="container hero__inner">
     <p class="hero__eyebrow">Karoo Digital Systems</p>
-    <h1 class="hero__heading">We engineer<br><em>systems</em> that scale.</h1>
+    <h1 class="hero__heading">Engineering<br><em>systems</em> that scale.</h1>
     <p class="hero__body">
-      Melbourne's digital systems agency. Four divisions, one team —
-      we build the web, run the ads, hold the stack, and automate
-      the rest for operators who want infrastructure that actually ships.
+      Melbourne's digital systems agency. We build websites, run ads,
+      manage Microsoft 365, and automate the manual work — for childcare
+      operators, manufacturers, trades, and professional services businesses.
     </p>
     <div class="hero__actions">
-      <a href="contact.html" class="btn btn--primary btn--magnetic">Start a project →</a>
-      <a href="work.html"    class="btn btn--secondary btn--magnetic">See our work →</a>
+      <a href="/contact" class="btn btn--primary btn--magnetic">Start a project →</a>
+      <a href="/work"    class="btn btn--secondary btn--magnetic">See our work →</a>
     </div>
     <div class="hero__status">
       <span class="status-dot" aria-hidden="true"></span>
@@ -88,7 +106,7 @@
   </div>
   <div class="hero__accent" aria-hidden="true"></div>
   <div class="hero__corner" aria-hidden="true"></div>
-  <div class="hero__colourbar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="hero__colourbar" aria-hidden="true"></div>
 </section>
 
 <!-- ── Division Strip ────────────────────────────────────── -->
@@ -108,7 +126,7 @@
           Custom websites, content systems, and editorial design.
           WordPress, Webflow, headless — whatever fits.
         </p>
-        <a href="services.html#digital-media" class="division-card__link">Learn more →</a>
+        <a href="/services#digital-media" class="division-card__link">Learn more →</a>
       </article>
 
       <!-- Digital Marketing -->
@@ -122,7 +140,7 @@
           Google & Meta Ads, conversion-rate work, and the analytics
           scaffolding to prove it worked.
         </p>
-        <a href="services.html#digital-marketing" class="division-card__link">Learn more →</a>
+        <a href="/services#digital-marketing" class="division-card__link">Learn more →</a>
       </article>
 
       <!-- IT Services -->
@@ -136,7 +154,7 @@
           Cloud infrastructure, managed WordPress hosting, and the kind
           of monitoring that calls you, not the other way around.
         </p>
-        <a href="services.html#it-services" class="division-card__link">Learn more →</a>
+        <a href="/services#it-services" class="division-card__link">Learn more →</a>
       </article>
 
       <!-- AI Automation -->
@@ -147,10 +165,10 @@
         </div>
         <h3 class="division-card__tagline">Automate the rest.</h3>
         <p class="division-card__body">
-          n8n workflows, AI agents, and the integrations between your
-          stack and your stack's stack.
+          Email triage, stock portals, CRM pipelines, and the n8n
+          workflows that connect your tools without the manual steps.
         </p>
-        <a href="services.html#ai-automation" class="division-card__link">Learn more →</a>
+        <a href="/services#ai-automation" class="division-card__link">Learn more →</a>
       </article>
 
     </div>
@@ -174,13 +192,13 @@
           <span class="widget__badge widget__badge--live">● Live</span>
         </div>
         <div class="workflow">
-          <div class="workflow__node">Trigger → New Lead</div>
+          <div class="workflow__node">Trigger → Email Received</div>
           <div class="workflow__connector"></div>
-          <div class="workflow__node">Enrich → CRM</div>
+          <div class="workflow__node">Classify → AI Triage</div>
           <div class="workflow__connector"></div>
-          <div class="workflow__node">Notify → Slack</div>
+          <div class="workflow__node">Route → Priority Folder</div>
           <div class="workflow__connector"></div>
-          <div class="workflow__node">Email → ActiveCampaign</div>
+          <div class="workflow__node">Brief → Morning Summary</div>
         </div>
       </div>
 
@@ -330,7 +348,7 @@
         <p class="section-label" id="proof-heading">Selected work</p>
         <h2>Built. Shipped. Running.</h2>
       </div>
-      <a href="work.html" class="btn btn--secondary btn--magnetic">See all work →</a>
+      <a href="/work" class="btn btn--secondary btn--magnetic">See all work →</a>
     </div>
 
     <div class="proof__grid">
@@ -338,7 +356,7 @@
       <article class="project-card reveal">
         <div class="project-card__thumb project-card__thumb--orange">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/HappyHippo-Square-large.jpg" alt="Happy Hippo" loading="lazy">
+            <img src="images/client-logos/Happy_Hippo_Kindergarten_Childcare.jpg" alt="Happy Hippo" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -356,7 +374,7 @@
       <article class="project-card reveal reveal--delay-1">
         <div class="project-card__thumb project-card__thumb--orange">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/ForeverLearning.jpg" alt="Forever Learning" loading="lazy">
+            <img src="images/client-logos/Forever_Learning_Kindergarten_Childcare.jpg" alt="Forever Learning" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -374,7 +392,7 @@
       <article class="project-card reveal reveal--delay-2">
         <div class="project-card__thumb project-card__thumb--red">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/CSIRO-Care.jpg" alt="CSIROCare Clayton" loading="lazy">
+            <img src="images/client-logos/CSIRO_Care.jpg" alt="CSIROCare Clayton" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -390,18 +408,19 @@
       </article>
 
       <article class="project-card reveal reveal--delay-3">
-        <div class="project-card__thumb project-card__thumb--green">
+        <div class="project-card__thumb project-card__thumb--red">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/Elektra-Solar.jpg" alt="Elektra Solar" loading="lazy">
+            <img src="images/client-logos/Caravans_WA.jpg" alt="Caravans WA" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
           <div class="project-card__tags">
-            <span class="tag">Branding</span>
-            <span class="tag">IT Support</span>
+            <span class="tag">Google Ads</span>
+            <span class="tag">Meta Ads</span>
+            <span class="tag">Digital Marketing</span>
           </div>
-          <p class="project-card__title">Elektra Solar</p>
-          <p class="project-card__outcome">Branding · IT Support</p>
+          <p class="project-card__title">Caravans WA</p>
+          <p class="project-card__outcome">Google Ads · Meta Ads</p>
         </div>
       </article>
 
@@ -424,25 +443,26 @@
       </article>
 
       <article class="project-card reveal reveal--delay-1">
-        <div class="project-card__thumb project-card__thumb--red">
+        <div class="project-card__thumb project-card__thumb--green">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/CWA.jpg" alt="Caravans WA" loading="lazy">
+            <img src="images/client-logos/Precise_Laser_Cutting.jpg" alt="Precise Laser Cutting" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
           <div class="project-card__tags">
-            <span class="tag">Digital Marketing</span>
             <span class="tag">Website</span>
+            <span class="tag">Digital Marketing</span>
+            <span class="tag">Manufacturing</span>
           </div>
-          <p class="project-card__title">Caravans WA</p>
-          <p class="project-card__outcome">Digital Marketing · Website</p>
+          <p class="project-card__title">Precise Laser Cutting</p>
+          <p class="project-card__outcome">Website · Digital Marketing</p>
         </div>
       </article>
 
       <article class="project-card reveal reveal--delay-2">
         <div class="project-card__thumb project-card__thumb--orange">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/JGF-Big-Square.jpg" alt="Just Good Food" loading="lazy">
+            <img src="images/client-logos/Just_Good_Food.jpg" alt="Just Good Food" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -459,7 +479,7 @@
       <article class="project-card reveal reveal--delay-1">
         <div class="project-card__thumb project-card__thumb--blue">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/Intelligent-Engineering.jpg" alt="Intelligent Engineering" loading="lazy">
+            <img src="images/client-logos/Intelligent_Engineering.jpg" alt="Intelligent Engineering" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -483,55 +503,31 @@
   </div>
   <div class="client-strip__track-wrap">
     <div class="client-strip__track">
-      <img src="images/client-logos/ADVMD.jpg" alt="ADVMD" class="client-strip__logo">
-      <img src="images/client-logos/Bonza-Trailers.jpg" alt="Bonza Trailers" class="client-strip__logo">
-      <img src="images/client-logos/CaravanSolutions.jpg" alt="Caravan Solutions" class="client-strip__logo">
-      <img src="images/client-logos/CIIG.jpg" alt="CIIG" class="client-strip__logo">
-      <img src="images/client-logos/CSIRO-Care.jpg" alt="CSIROCare Clayton" class="client-strip__logo">
-      <img src="images/client-logos/CWA.jpg" alt="Caravans WA" class="client-strip__logo">
-      <img src="images/client-logos/Elektra-Solar.jpg" alt="Elektra Solar" class="client-strip__logo">
-      <img src="images/client-logos/FairDinkumCaravans.png" alt="Fair Dinkum Caravans" class="client-strip__logo">
-      <img src="images/client-logos/ForeverLearning.jpg" alt="Forever Learning" class="client-strip__logo">
-      <img src="images/client-logos/GCPD.jpg" alt="GCPD" class="client-strip__logo">
-      <img src="images/client-logos/HappyHippo-Square-large.jpg" alt="Happy Hippo" class="client-strip__logo">
-      <img src="images/client-logos/Intelligent-Engineering.jpg" alt="Intelligent Engineering" class="client-strip__logo">
-      <img src="images/client-logos/JGF-Big-Square.jpg" alt="Just Good Food" class="client-strip__logo">
-      <img src="images/client-logos/LOGO500px.png" alt="Client" class="client-strip__logo">
-      <img src="images/client-logos/NE.jpg" alt="NE" class="client-strip__logo">
-      <img src="images/client-logos/NETrailworx.jpg" alt="NE Trailworx" class="client-strip__logo">
-      <img src="images/client-logos/nextgen.jpg" alt="Nextgen" class="client-strip__logo">
-      <img src="images/client-logos/nRV.png" alt="nRV" class="client-strip__logo">
-      <img src="images/client-logos/NurseEmily.png" alt="Nurse Emily" class="client-strip__logo">
-      <img src="images/client-logos/PreciseLogo-Square2.jpg" alt="Precise Laser Cutting" class="client-strip__logo">
-      <img src="images/client-logos/St-Nich.jpg" alt="St Nich" class="client-strip__logo">
-      <img src="images/client-logos/TEKO-adventure-500px.jpg" alt="TEKO Adventure" class="client-strip__logo">
-      <img src="images/client-logos/Tuffride.jpg" alt="Tuffride" class="client-strip__logo">
-      <img src="images/client-logos/Vancraft.jpg" alt="Vancraft" class="client-strip__logo">
-      <!-- Duplicate for seamless loop -->
-      <img src="images/client-logos/ADVMD.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/Bonza-Trailers.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/CaravanSolutions.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/CIIG.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/CSIRO-Care.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/CWA.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/Elektra-Solar.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/FairDinkumCaravans.png" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/ForeverLearning.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/GCPD.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/HappyHippo-Square-large.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/Intelligent-Engineering.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/JGF-Big-Square.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/LOGO500px.png" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/NE.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/NETrailworx.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/nextgen.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/nRV.png" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/NurseEmily.png" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/PreciseLogo-Square2.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/St-Nich.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/TEKO-adventure-500px.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/Tuffride.jpg" alt="" aria-hidden="true" class="client-strip__logo">
-      <img src="images/client-logos/Vancraft.jpg" alt="" aria-hidden="true" class="client-strip__logo">
+      <img src="images/client-logos/Adventure_Motorcycle_Database.jpg" alt="Adventure Motorcycle Database" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Bonza_Trailers.jpg" alt="Bonza Trailers" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Caravans_WA.jpg" alt="Caravans WA" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/CaravanSolutions.jpg" alt="Caravan Solutions" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/CIIG.jpg" alt="CIIG" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/CSIRO_Care.jpg" alt="CSIRO Care" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Elektra_Solar.jpg" alt="Elektra Solar" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/FairDinkum_Caravans.png" alt="Fair Dinkum Caravans" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Forever_Learning_Kindergarten_Childcare.jpg" alt="Forever Learning Kindergarten &amp; Childcare" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/GCPD.jpg" alt="GC Precision Developments" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Happy_Hippo_Kindergarten_Childcare.jpg" alt="Happy Hippo Kindergarten &amp; Childcare" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Holy_Trinity_St_Nicholas.jpg" alt="Holy Trinity St Nicholas" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Intelligent_Engineering.jpg" alt="Intelligent Engineering" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Just_Good_Food.jpg" alt="Just Good Food" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/NE_Trailworx.jpg" alt="NE Trailworx" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Network_Engineering.jpg" alt="Network Engineering" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/NextGen_Caravans.jpg" alt="NextGen Caravans" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/nRV.png" alt="nRV" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Nurse_Emily.png" alt="Nurse Emily" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/OFFROAD-ICE.png" alt="Offroad Ice" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Precise_Laser_Cutting.jpg" alt="Precise Laser Cutting" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/TEKO_Adventure.jpg" alt="TEKO Adventure" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Tuffride.jpg" alt="Tuffride" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Vancraft.jpg" alt="Vancraft" loading="lazy" class="client-strip__logo">
+      <img src="images/client-logos/Victory_Caravans.jpg" alt="Victory Caravans" loading="lazy" class="client-strip__logo">
     </div>
   </div>
 </section>
@@ -541,28 +537,27 @@
   <div class="container">
     <div class="bio__inner">
       <div class="bio__photo">
-        <!-- Replace with Stephan headshot: images/stephan-alberts.webp -->
-        <div class="bio__photo-placeholder">Photo<br><span style="font-size:0.6rem;opacity:0.5;">coming soon</span></div>
+        <img src="images/StephanAlberts.jpg" alt="Stephan Alberts, Founder of Karoo" loading="lazy">
       </div>
       <div class="bio__content reveal">
         <p class="section-label">The person behind it</p>
         <h2 class="bio__name" id="bio-heading">Stephan Alberts</h2>
         <p class="bio__role">Founder, Karoo</p>
         <p class="bio__text">
-          15+ years building digital systems for local businesses.
+          15+ years generating leads and growing sales for local businesses.
           Melbourne-based. You'll work directly with me.
         </p>
         <p class="bio__text">
-          Started with websites, expanded into marketing and IT, now
-          focused on AI automation and the infrastructure that connects it all.
+          Started in digital marketing, expanded into websites and IT infrastructure,
+          now focused on AI automation and the systems that connect it all.
         </p>
-        <a href="about.html" class="btn btn--secondary btn--magnetic bio__cta">More about Karoo →</a>
+        <a href="/about" class="btn btn--secondary btn--magnetic bio__cta">More about Karoo →</a>
       </div>
     </div>
 
     <!-- Signage / office image — rename your file to: images/signage.jpg -->
     <div class="bio__signage reveal">
-      <img src="images/signage.jpg" alt="Karoo — St Kilda, Melbourne" loading="lazy"
+      <img src="images/stephan-signage.jpg" alt="Karoo — St Kilda, Melbourne" loading="lazy"
            onerror="this.parentElement.style.display='none'">
     </div>
 
@@ -591,7 +586,7 @@
           <div class="contact-info__item">
             <span class="contact-info__item-label">Email</span>
             <span class="contact-info__item-value">
-              <a href="mailto:info@karoomedia.com">info@karoomedia.com</a>
+              <a href="mailto:hello@karoo.com.au">hello@karoo.com.au</a>
             </span>
           </div>
         </div>
@@ -604,40 +599,542 @@
       </div>
 
       <div class="contact-form reveal reveal--delay-1">
-        <form class="js-contact-form" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="h-name">Name</label>
-              <input type="text" id="h-name" name="name" placeholder="Your name" required>
+
+        <!-- ActiveCampaign form #111 (homepage) — default AC styles first, then dark overrides -->
+        <style>
+        #_form_111_{font-size:14px;line-height:1.6;font-family:arial, helvetica, sans-serif;margin:0;box-shadow:none}._form_hide{display:none;visibility:hidden}._form_show{display:block;visibility:visible}#_form_111_._form-top{top:0}#_form_111_._form-bottom{bottom:0}#_form_111_._form-left{left:0}#_form_111_._form-right{right:0}#_form_111_ input[type="text"],#_form_111_ input[type="tel"],#_form_111_ input[type="date"],#_form_111_ textarea{padding:8px;height:auto;border:#979797 1px solid;border-radius:4px;color:#000 !important;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_111_ textarea{resize:none}#_form_111_ input::placeholder{color:#142341}#_form_111_ ._submit{cursor:pointer;font-family:arial, sans-serif;font-size:14px;text-align:center;background:#004cff !important;border:0 !important;-moz-border-radius:4px !important;-webkit-border-radius:4px !important;border-radius:4px !important;color:#ffffff !important;padding:10px !important}#_form_111_ ._submit:disabled{cursor:not-allowed;opacity:0.4}#_form_111_ ._submit.processing{position:relative}#_form_111_ ._submit.processing::before{content:"";width:1em;height:1em;position:absolute;z-index:1;top:50%;left:50%;border:double 3px transparent;border-radius:50%;background-image:linear-gradient(#004cff, #004cff), conic-gradient(#004cff, #ffffff);background-origin:border-box;background-clip:content-box, border-box;animation:1200ms ease 0s infinite normal none running _spin}#_form_111_ ._submit.processing::after{content:"";position:absolute;top:0;bottom:0;left:0;right:0}@keyframes _spin{0%{transform:translate(-50%, -50%) rotate(90deg)}100%{transform:translate(-50%, -50%) rotate(450deg)}}#_form_111_ ._close-icon{cursor:pointer;background-image:url("https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png");background-repeat:no-repeat;background-size:14.2px 14.2px;position:absolute;display:block;top:11px;right:9px;overflow:hidden;width:16.2px;height:16.2px}#_form_111_ ._close-icon:before{position:relative}#_form_111_ ._form-body{font-family:sans-serif;font-size:14px;font-weight:400;color:black;margin-bottom:30px}#_form_111_ ._form-image-left{width:150px;float:left}#_form_111_ ._form-content-right{margin-left:164px}#_form_111_ ._form-branding{color:#fff;font-size:10px;clear:both;text-align:left;margin-top:30px;font-weight:100}#_form_111_ ._form-branding ._logo{display:block;width:130px;height:14px;margin-top:6px;background-image:url("https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png");background-size:130px auto;background-repeat:no-repeat}#_form_111_ .form-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}#_form_111_ ._form-label,#_form_111_ ._form_element ._form-label{font-weight:bold;margin-bottom:5px;display:block}#_form_111_._dark ._form-branding{color:#333}#_form_111_._dark ._form-branding ._logo{background-image:url("https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png")}#_form_111_ ._form_element{position:relative;margin-bottom:10px;max-width:100%}#_form_111_ ._form_element *{font-size:14px}#_form_111_ ._form_element._clear{clear:both;width:100%;float:none}#_form_111_ ._form_element._clear:after{clear:left}#_form_111_ ._form_element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]),#_form_111_ ._form-element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]){background:white;color:#142341 !important;border-top:1px solid #cccccc;border-left:1px solid #cccccc;border-right:1px solid #cccccc;border-bottom:1px solid #cccccc;border-radius:0px}#_form_111_ ._form_element input[type="text"],#_form_111_ ._form_element input[type="date"],#_form_111_ ._form_element select,#_form_111_ ._form_element textarea:not(.g-recaptcha-response){display:block;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:inherit}#_form_111_ ._field-wrapper{position:relative}#_form_111_ ._inline-style{float:left}#_form_111_ ._inline-style input[type="text"]{width:150px}#_form_111_ ._inline-style:not(._clear){margin-right:20px}#_form_111_ ._form_element img._form-image{max-width:100%}#_form_111_ ._form_element ._form-fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0}#_form_111_ ._clear-element{clear:left}#_form_111_ ._full_width{width:100%}#_form_111_ ._form_full_field{display:block;width:100%;margin-bottom:10px}#_form_111_ input[type="text"]._has_error,#_form_111_ textarea._has_error{border:#F37C7B 1px solid}#_form_111_ input[type="checkbox"]._has_error{outline:#F37C7B 1px solid}#_form_111_ ._show_be_error{float:left}#_form_111_ ._error{display:block;position:absolute;font-size:14px;z-index:10000001}#_form_111_ ._error._above{padding-bottom:4px;bottom:39px;right:0}#_form_111_ ._error._below{padding-top:8px;top:100%;right:0}#_form_111_ ._error._above ._error-arrow{bottom:-4px;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #FFDDDD}#_form_111_ ._error._below ._error-arrow{top:0;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #FFDDDD}#_form_111_ ._error-inner{padding:12px 12px 12px 36px;background-color:#FFDDDD;background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9 3V9H7V3H9ZM9 13V11H7V13H9Z' fill='%23CA0000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;font-size:14px;font-family:arial, sans-serif;font-weight:600;line-height:16px;color:#000;text-align:center;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;box-shadow:0 1px 4px rgba(31, 33, 41, 0.298295)}#_form_111_ ._error-inner._form_error{margin-bottom:5px;text-align:left}#_form_111_ ._button-wrapper ._error-inner._form_error{position:static}#_form_111_ ._error-inner._no_arrow{margin-bottom:10px}#_form_111_ ._error-arrow{position:absolute;width:0;height:0}#_form_111_ ._error-html{margin-bottom:10px}.pika-single{z-index:10000001 !important}#_form_111_ ._form-title,#_form_111_ ._html-code :is(h1, h2, h3, h4, h5, h6){font-family:sans-serif;font-size:24px;font-weight:400;color:black}@media (min-width:320px) and (max-width:667px){#_form_111_{margin:0;width:100%;min-width:100%;max-width:100%;box-sizing:border-box}#_form_111_ *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:1em}#_form_111_ ._form-content{margin:0;width:100%}#_form_111_ ._form-inner{display:block;min-width:100%}#_form_111_ ._form-title,#_form_111_ ._inline-style{margin-top:0;margin-right:0;margin-left:0}#_form_111_ ._form-title{font-size:1.2em}#_form_111_ ._form_element{margin:0 0 20px;padding:0;width:100%}#_form_111_ ._form-element,#_form_111_ ._inline-style,#_form_111_ input[type="text"],#_form_111_ label,#_form_111_ p,#_form_111_ textarea:not(.g-recaptcha-response){float:none;display:block;width:100%}#_form_111_ ._row._checkbox-radio label{display:inline}#_form_111_ ._row,#_form_111_ p,#_form_111_ label{margin-bottom:0.7em;width:100%}#_form_111_ ._row input[type="checkbox"],#_form_111_ ._row input[type="radio"]{margin:0 !important;vertical-align:middle !important}#_form_111_ ._row input[type="checkbox"]+span label{display:inline}#_form_111_ ._row span label{margin:0 !important;width:initial !important;vertical-align:middle !important}#_form_111_ ._form-image{max-width:100%;height:auto !important}#_form_111_ input[type="text"]{padding-left:10px;padding-right:10px;font-size:16px;line-height:1.3em}#_form_111_ input[type="radio"],#_form_111_ input[type="checkbox"]{display:inline-block;width:1.3em;height:1.3em;font-size:1em;margin:0 0.3em 0 0;vertical-align:baseline}#_form_111_ button[type="submit"]{padding:20px;font-size:1.5em}#_form_111_ ._inline-style{margin:20px 0 0 !important}#_form_111_ ._inline-style input[type="text"]{width:100%}}#_form_111_ .field-required{color:#FF0000}#_form_111_{position:relative;text-align:left;margin:25px auto 0;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:white !important;border-top:0px solid #b0b0b0 !important;border-right:0px solid #b0b0b0 !important;border-bottom:0px solid #b0b0b0 !important;border-left:0px solid #b0b0b0 !important;max-width:500px;-moz-border-radius:0px !important;-webkit-border-radius:0px !important;border-radius:0px !important;color:#000000}#_form_111_ ._show_be_error{min-width:100%}#_form_111_._inline-form,#_form_111_._inline-form ._form-content{font-family:sans-serif;font-size:14px;font-weight:400}#_form_111_._inline-form ._row span:not(.field-required),#_form_111_._inline-form ._row label{font-family:sans-serif;font-size:14px;font-weight:400;line-height:1.6em;color:black}#_form_111_._inline-form ._form-label,#_form_111_._inline-form ._form-emailidentifier,#_form_111_._inline-form ._form-checkbox-option-label{font-family:sans-serif;font-size:14px;font-weight:700;line-height:1.6em;color:black}#_form_111_._inline-form ._submit{margin-top:12px;font-family:sans-serif;font-size:14px;font-weight:400}#_form_111_._inline-form ._html-code h1,#_form_111_._inline-form ._html-code h2,#_form_111_._inline-form ._html-code h3,#_form_111_._inline-form ._html-code h4,#_form_111_._inline-form ._html-code h5,#_form_111_._inline-form ._html-code h6,#_form_111_._inline-form ._form-title{margin-bottom:0;display:block}#_form_111_._inline-form ._form-branding{font-family:"IBM Plex Sans", Helvetica, sans-serif;font-size:13px;font-weight:100;font-style:normal;text-decoration:none}#_form_111_:before,#_form_111_:after{content:" ";display:table}#_form_111_:after{clear:both}#_form_111_._inline-style{width:auto;display:inline-block}#_form_111_._inline-style input[type="text"],#_form_111_._inline-style input[type="date"]{padding:10px 12px}#_form_111_._inline-style button._inline-style{position:relative;top:27px}#_form_111_._inline-style p{margin:0}#_form_111_._inline-style ._button-wrapper{position:relative;margin:16px 12.5px 0 20px}#_form_111_._inline-style ._button-wrapper:not(._clear){margin-left:0}#_form_111_ ._form-thank-you{position:relative;left:0;right:0;text-align:center;font-size:18px}#_form_111_ ._form-pc-confirmation ._submit{margin-top:16px}#_form_111_ .iti{width:100%}#_form_111_ .iti input{width:100%;border:#979797 1px solid;border-radius:4px}#_form_111_ .phone-error-hidden{display:none}#_form_111_ .phone-error{color:#E40E49}#_form_111_ .phone-input-error{border:1px solid #E40E49 !important}
+        </style>
+
+        <!-- ═══════════════════════════════════════════════════
+             Karoo dark overrides for AC form #111 (homepage)
+             Wrapper context: .contact-form
+               background = rgba(255,255,255,0.03) on --deep-slate (#1B1E23)
+             Dark section → dark inputs, light text, clay CTA.
+             ═══════════════════════════════════════════════════ -->
+        <style>
+          /* ── 1. Strip AC's own card shell ─────────────────── */
+          #_form_111_ {
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: 100% !important;
+            font-family: 'Poppins', sans-serif !important;
+            color: #F5F2ED !important;
+            box-shadow: none !important;
+          }
+
+          /* ── 2. Hide AC title, description & branding ─────── */
+          #_form_111_ ._form_element._field_header,
+          #_form_111_ ._form_element._field_html,
+          #_form_111_ ._form-branding {
+            display: none !important;
+          }
+
+          /* ── 3. Labels ─────────────────────────────────────── */
+          #_form_111_ ._form-label,
+          #_form_111_ ._form_element ._form-label,
+          #_form_111_._inline-form ._form-label,
+          #_form_111_._inline-form ._form-emailidentifier,
+          #_form_111_._inline-form ._row label {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            color: #F5F2ED !important;
+            margin-bottom: 8px !important;
+            line-height: 1.4 !important;
+          }
+
+          /* ── 4. Text inputs & textarea ─────────────────────── */
+          #_form_111_ input[type="text"],
+          #_form_111_ input[type="tel"],
+          #_form_111_ input[type="date"],
+          #_form_111_ textarea {
+            background: #282828 !important;
+            border: 1px solid #416963 !important;
+            border-radius: 8px !important;
+            color: #ffffff !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 14px !important;
+            padding: 12px 16px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            height: auto !important;
+          }
+
+          /* ── 5. Select — override AC's four individual borders */
+          #_form_111_ select,
+          #_form_111_ ._form_element select {
+            background-color: #282828 !important;
+            border-top: 1px solid #416963 !important;
+            border-left: 1px solid #416963 !important;
+            border-right: 1px solid #416963 !important;
+            border-bottom: 1px solid #416963 !important;
+            border-radius: 8px !important;
+            color: #ffffff !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 14px !important;
+            padding: 12px 40px 12px 16px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            /* light chevron for dark bg */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 16px center !important;
+            background-size: 12px !important;
+          }
+
+          /* ── 6. AC's :is() combined rule ───────────────────── */
+          #_form_111_ ._form_element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]),
+          #_form_111_ ._form-element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]) {
+            background: #282828 !important;
+            border-top: 1px solid #416963 !important;
+            border-left: 1px solid #416963 !important;
+            border-right: 1px solid #416963 !important;
+            border-bottom: 1px solid #416963 !important;
+            border-radius: 8px !important;
+            color: #ffffff !important;
+          }
+
+          /* ── 7. Focus state ────────────────────────────────── */
+          #_form_111_ input[type="text"]:focus,
+          #_form_111_ input[type="tel"]:focus,
+          #_form_111_ input[type="date"]:focus,
+          #_form_111_ textarea:focus,
+          #_form_111_ select:focus {
+            border-color: #2E4A6F !important;
+            box-shadow: 0 0 0 3px rgba(46, 74, 111, 0.25) !important;
+            outline: none !important;
+          }
+
+          /* ── 8. Placeholder text ───────────────────────────── */
+          #_form_111_ input[type="text"]::placeholder,
+          #_form_111_ textarea::placeholder {
+            color: #999999 !important;
+            opacity: 1 !important;
+          }
+
+          /* ── 9. Select options ─────────────────────────────── */
+          #_form_111_ select option {
+            background: #282828 !important;
+            color: #ffffff !important;
+          }
+
+          /* ── 10. Field spacing ─────────────────────────────── */
+          #_form_111_ ._form_element {
+            margin-bottom: 20px !important;
+          }
+
+          /* ── 11. Required asterisk ─────────────────────────── */
+          #_form_111_ .field-required {
+            color: #b36b3d !important;
+          }
+
+          /* ── 12. Submit button (Earth/Clay) ────────────────── */
+          #_form_111_ ._submit {
+            background: #b36b3d !important;
+            color: #ffffff !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            padding: 16px 32px !important;
+            border-radius: 12px !important;
+            border: none !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            display: block !important;
+            text-align: center !important;
+            transition: background 0.2s ease, transform 0.18s ease !important;
+            margin-top: 8px !important;
+            letter-spacing: 0.01em !important;
+          }
+
+          #_form_111_ ._submit:hover:not(:disabled) {
+            background: #9a5a31 !important;
+            transform: translateY(-2px) !important;
+          }
+
+          #_form_111_ ._submit:disabled,
+          #_form_111_ ._submit.processing {
+            opacity: 0.5 !important;
+            cursor: not-allowed !important;
+            transform: none !important;
+          }
+
+          /* ── 13. Success / thank-you state ─────────────────── */
+          #_form_111_ ._form-thank-you {
+            color: #F5F2ED !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 18px !important;
+            text-align: center !important;
+            padding: 48px 0 !important;
+            line-height: 1.7 !important;
+          }
+
+          /* ── 14. Inline error messages ─────────────────────── */
+          #_form_111_ ._error-inner {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 12px !important;
+          }
+
+          #_form_111_ input[type="text"]._has_error,
+          #_form_111_ textarea._has_error,
+          #_form_111_ select._has_error {
+            border: 1px solid #F37C7B !important;
+          }
+
+          /* ── 15. Prevent iOS auto-zoom on focus ────────────── */
+          @media (max-width: 480px) {
+            #_form_111_ input[type="text"],
+            #_form_111_ textarea,
+            #_form_111_ select {
+              font-size: 16px !important;
+            }
+          }
+        </style>
+
+        <form method="POST" action="https://karoomedia.activehosted.com/proc.php" id="_form_111_" class="_form _form_111 _inline-form _dark" novalidate data-styles-version="5">
+          <input type="hidden" name="u" value="6A166ECD8E7BA" />
+          <input type="hidden" name="f" value="111" />
+          <input type="hidden" name="s" />
+          <input type="hidden" name="c" value="0" />
+          <input type="hidden" name="m" value="0" />
+          <input type="hidden" name="act" value="sub" />
+          <input type="hidden" name="v" value="2" />
+          <input type="hidden" name="or" value="10d3d51e-305a-47d9-b68e-209217c2a7f6" />
+          <div class="_form-content">
+            <div class="_form_element _field_header _full_width _clear">
+              <h2 class="_form-title">Send a brief</h2>
             </div>
-            <div class="form-group">
-              <label for="h-email">Email</label>
-              <input type="email" id="h-email" name="email" placeholder="you@company.com" required>
+            <div class="_form_element _field_html _full_width _clear">
+              <div class="_html-code"><p>Tell us what you're trying to build or fix.</p></div>
             </div>
+            <div class="_form_element _field_name _full_width">
+              <label for="fullname" class="_form-label">Full Name</label>
+              <div class="_field-wrapper">
+                <input type="text" id="fullname" name="fullname" placeholder="Your name" />
+              </div>
+            </div>
+            <div class="_form_element _field_email _full_width">
+              <label for="email" class="_form-label">Email<span class="field-required"> *</span></label>
+              <div class="_field-wrapper">
+                <input type="text" id="email" name="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+            <div class="_form_element _x32029382 _full_width">
+              <label for="field[1]" class="_form-label">Company</label>
+              <div class="_field-wrapper">
+                <input type="text" id="field[1]" name="field[1]" value="" placeholder="Your company (optional)" />
+              </div>
+            </div>
+            <div class="_form_element _x33671806 _full_width">
+              <label for="field[68]" class="_form-label">I'm looking to…</label>
+              <div class="_field-wrapper">
+                <select name="field[68]" id="field[68]">
+                  <option value="" selected>Select a service area…</option>
+                  <option value="...scale our ads &amp; accelerate growth">…scale our ads &amp; accelerate growth</option>
+                  <option value="...build custom AI workflows &amp; automation">…build custom AI workflows &amp; automation</option>
+                  <option value="...upgrade our cloud hosting &amp; IT systems">…upgrade our cloud hosting &amp; IT systems</option>
+                  <option value="...elevate our website, branding &amp; content media">…elevate our website, branding &amp; content media</option>
+                  <option value="...a combination of these">…a combination of these</option>
+                </select>
+              </div>
+            </div>
+            <div class="_form_element _x67374132 _full_width">
+              <label for="field[4]" class="_form-label">Brief</label>
+              <div class="_field-wrapper">
+                <textarea id="field[4]" name="field[4]" placeholder="Tell us what you're trying to build or fix…"></textarea>
+              </div>
+            </div>
+            <div class="_button-wrapper _full_width">
+              <button id="_form_111_submit" class="_submit" type="submit">Send brief →</button>
+            </div>
+            <div class="_clear-element"></div>
           </div>
-          <div class="form-group">
-            <label for="h-company">Company</label>
-            <input type="text" id="h-company" name="company" placeholder="Your company (optional)">
-          </div>
-          <div class="form-group">
-            <label for="h-division">Which division?</label>
-            <select id="h-division" name="division">
-              <option value="" disabled selected>Select a division…</option>
-              <option value="digital-media">Digital Media — Web &amp; Content</option>
-              <option value="digital-marketing">Digital Marketing — Ads &amp; Growth</option>
-              <option value="it-services">IT Services — Cloud &amp; Hosting</option>
-              <option value="ai-automation">AI Automation — Agents &amp; n8n</option>
-              <option value="unsure">Not sure yet</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="h-brief">Brief</label>
-            <textarea id="h-brief" name="brief" placeholder="Tell us what you're trying to build or fix…" rows="4"></textarea>
-          </div>
-          <div class="form-submit">
-            <button type="submit" class="btn btn--primary btn--magnetic">Send brief →</button>
-          </div>
+          <div class="_form-thank-you" style="display:none;"></div>
         </form>
+
+        <script>
+        window.cfields = {"1":"company","68":"im_looking_to","4":"your_message"};
+        window._show_thank_you = function(id, message, trackcmp_url, email) {
+            var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+            form.querySelector('._form-content').style.display = 'none';
+            thank_you.innerHTML = message;
+            thank_you.style.display = 'block';
+            const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+            var visitorObject = window[vgoAlias];
+            if (email && typeof visitorObject !== 'undefined') {
+                visitorObject('setEmail', email);
+                visitorObject('update');
+            } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+                _load_script(trackcmp_url);
+            }
+            if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+            thank_you.setAttribute('tabindex', '-1');
+            thank_you.focus();
+        };
+        window._show_error = function(id, message, html) {
+            var form = document.getElementById('_form_' + id + '_'),
+                err = document.createElement('div'),
+                button = form.querySelector('button[type="submit"]'),
+                old_error = form.querySelector('._form_error');
+            if (old_error) old_error.parentNode.removeChild(old_error);
+            err.innerHTML = message;
+            err.className = '_error-inner _form_error _no_arrow';
+            var wrapper = document.createElement('div');
+            wrapper.className = '_form-inner _show_be_error';
+            wrapper.appendChild(err);
+            button.parentNode.insertBefore(wrapper, button);
+            var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
+            submitButton.disabled = false;
+            submitButton.classList.remove('processing');
+            if (html) {
+                var div = document.createElement('div');
+                div.className = '_error-html';
+                div.innerHTML = html;
+                err.appendChild(div);
+            }
+        };
+        window._load_script = function(url, callback, isSubmit) {
+            var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+            var submitButton = document.querySelector('#_form_111_submit');
+            script.charset = 'utf-8';
+            script.src = url;
+            if (callback) {
+                script.onload = script.onreadystatechange = function() {
+                    if (!r && (!this.readyState || this.readyState == 'complete')) {
+                        r = true;
+                        callback();
+                    }
+                };
+            }
+            script.onerror = function() {
+                if (isSubmit) {
+                    if (script.src.length > 10000) {
+                        _show_error("111", "Sorry, your submission failed. Please shorten your responses and try again.");
+                    } else {
+                        _show_error("111", "Sorry, your submission failed. Please try again.");
+                    }
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('processing');
+                }
+            }
+            head.appendChild(script);
+        };
+        (function() {
+            var iti;
+            if (window.location.search.search("excludeform") !== -1) return false;
+            var addEvent = function(element, event, func) {
+                if (element.addEventListener) {
+                    element.addEventListener(event, func);
+                } else {
+                    var oldFunc = element['on' + event];
+                    element['on' + event] = function() {
+                        oldFunc.apply(this, arguments);
+                        func.apply(this, arguments);
+                    };
+                }
+            }
+            var _removed = false;
+            var form_to_submit = document.getElementById('_form_111_');
+            var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+            var getUrlParam = function(name) {
+                if (name.toLowerCase() !== 'email') {
+                    var params = new URLSearchParams(window.location.search);
+                    return params.get(name) || false;
+                }
+                var qString = window.location.search;
+                if (!qString) { return false; }
+                var parameters = qString.substr(1).split('&');
+                for (var i = 0; i < parameters.length; i++) {
+                    var parameter = parameters[i].split('=');
+                    if (parameter[0].toLowerCase() === 'email') {
+                        return parameter[1] === undefined ? true : decodeURIComponent(parameter[1]);
+                    }
+                }
+                return false;
+            };
+
+            for (var i = 0; i < allInputs.length; i++) {
+                var regexStr = "field\\[(\\d+)\\]";
+                var results = new RegExp(regexStr).exec(allInputs[i].name);
+                if (results != undefined) {
+                    allInputs[i].dataset.name = window.cfields[results[1]];
+                } else {
+                    allInputs[i].dataset.name = allInputs[i].name;
+                }
+                var fieldVal = getUrlParam(allInputs[i].dataset.name);
+                if (fieldVal) {
+                    if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") {
+                        if (allInputs[i].value == fieldVal) { allInputs[i].checked = true; }
+                    } else {
+                        allInputs[i].value = fieldVal;
+                    }
+                }
+            }
+
+            var remove_tooltips = function() {
+                for (var i = 0; i < tooltips.length; i++) {
+                    tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+                }
+                tooltips = [];
+            };
+            var remove_tooltip = function(elem) {
+                for (var i = 0; i < tooltips.length; i++) {
+                    if (tooltips[i].elem === elem) {
+                        tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+                        tooltips.splice(i, 1);
+                        return;
+                    }
+                }
+            };
+            var create_tooltip = function(elem, text) {
+                var tooltip = document.createElement('div'),
+                    arrow = document.createElement('div'),
+                    inner = document.createElement('div'), new_tooltip = {};
+                tooltip.id = `${elem.id}-error`;
+                tooltip.setAttribute('role', 'alert');
+                if (elem.type != 'radio' && (elem.type != 'checkbox' || elem.name === 'sms_consent')) {
+                    tooltip.className = '_error';
+                    arrow.className = '_error-arrow';
+                    inner.className = '_error-inner';
+                    inner.innerHTML = text;
+                    tooltip.appendChild(arrow);
+                    tooltip.appendChild(inner);
+                    elem.parentNode.appendChild(tooltip);
+                } else {
+                    tooltip.className = '_error-inner _no_arrow';
+                    tooltip.innerHTML = text;
+                    elem.parentNode.insertBefore(tooltip, elem);
+                    new_tooltip.no_arrow = true;
+                }
+                new_tooltip.tip = tooltip;
+                new_tooltip.elem = elem;
+                tooltips.push(new_tooltip);
+                return new_tooltip;
+            };
+            var resize_tooltip = function(tooltip) {
+                var rect = tooltip.elem.getBoundingClientRect();
+                var doc = document.documentElement,
+                    scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0));
+                if (scrollPosition < 40) {
+                    tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below';
+                } else {
+                    tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above';
+                }
+            };
+            var resize_tooltips = function() {
+                if (_removed) return;
+                for (var i = 0; i < tooltips.length; i++) {
+                    if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]);
+                }
+            };
+            var validate_field = function(elem, remove) {
+                var tooltip = null, value = elem.value, no_error = true;
+                remove ? remove_tooltip(elem) : false;
+                elem.removeAttribute('aria-invalid');
+                elem.removeAttribute('aria-describedby');
+                if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+                if (elem.getAttribute('required') !== null) {
+                    if (elem.tagName == 'SELECT') {
+                        var selected = true;
+                        for (var i = 0; i < elem.options.length; i++) {
+                            if (elem.options[i].selected && (!elem.options[i].value || elem.options[i].value.match(/\n/g))) {
+                                selected = false;
+                            }
+                        }
+                        if (!selected) {
+                            elem.className = elem.className + ' _has_error';
+                            no_error = false;
+                            tooltip = create_tooltip(elem, "Please select an option.");
+                        }
+                    } else if (value === undefined || value === null || value === '') {
+                        elem.className = elem.className + ' _has_error';
+                        no_error = false;
+                        tooltip = create_tooltip(elem, "This field is required.");
+                    }
+                }
+                if (no_error && elem.name == 'email') {
+                    if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                        elem.className = elem.className + ' _has_error';
+                        no_error = false;
+                        tooltip = create_tooltip(elem, "Enter a valid email address.");
+                    }
+                }
+                tooltip ? resize_tooltip(tooltip) : false;
+                if (!no_error && elem.hasAttribute('id')) {
+                    elem.setAttribute('aria-invalid', 'true');
+                    elem.setAttribute('aria-describedby', `${elem.id}-error`);
+                }
+                return no_error;
+            };
+            var needs_validate = function(el) {
+                if (el.getAttribute('required') !== null) { return true; }
+                if (el.name === 'email' && el.value !== "") { return true; }
+                return false;
+            };
+            var validate_form = function(e) {
+                var no_error = true;
+                if (!submitted) {
+                    submitted = true;
+                    for (var i = 0, len = allInputs.length; i < len; i++) {
+                        var input = allInputs[i];
+                        if (needs_validate(input)) {
+                            if (input.type == 'text' || input.type == 'tel') {
+                                addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); });
+                                addEvent(input, 'input', function() { validate_field(this, true); });
+                            } else if (input.tagName == 'SELECT') {
+                                addEvent(input, 'change', function() { validate_field(this, true); });
+                            } else if (input.type == 'textarea') {
+                                addEvent(input, 'input', function() { validate_field(this, true); });
+                            }
+                        }
+                    }
+                }
+                remove_tooltips();
+                for (var i = 0, len = allInputs.length; i < len; i++) {
+                    var elem = allInputs[i];
+                    if (needs_validate(elem)) {
+                        if (elem.tagName.toLowerCase() !== "select") { elem.value = elem.value.trim(); }
+                        validate_field(elem) ? true : no_error = false;
+                    }
+                }
+                if (!no_error && e) { e.preventDefault(); }
+                if (!no_error) {
+                    const firstFocusableError = form_to_submit.querySelector('._has_error:not([disabled])');
+                    if (firstFocusableError && typeof firstFocusableError.focus === 'function') {
+                        firstFocusableError.focus();
+                    }
+                }
+                resize_tooltips();
+                return no_error;
+            };
+            addEvent(window, 'resize', resize_tooltips);
+            addEvent(window, 'scroll', resize_tooltips);
+
+            var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
+
+            var form_submit = function(e) {
+                e.preventDefault();
+                if (validate_form(e)) {
+                    var submitButton = e.target.querySelector('#_form_111_submit');
+                    submitButton.disabled = true;
+                    submitButton.classList.add('processing');
+                    var serialized = _form_serialize(document.getElementById('_form_111_')).replace(/%0A/g, '\\n');
+                    var err = form_to_submit.querySelector('._form_error');
+                    err ? err.parentNode.removeChild(err) : false;
+                    _load_script('https://karoomedia.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+                }
+                return false;
+            };
+            addEvent(form_to_submit, 'submit', form_submit);
+        })();
+        </script>
+
       </div>
 
     </div>
@@ -660,47 +1157,44 @@
   <div class="container">
     <div class="footer__top">
       <div>
-        <img src="images/logos/Karoo-Digital-Systems.png" alt="Karoo" class="footer__logo" onerror="this.src='images/logos/Karoo-LIGHT.png'">
-        <p class="footer__brand-tagline">We engineer systems that scale.</p>
-        <p class="footer__brand-desc">
-          27 Herbert Street, St Kilda VIC 3182<br>
-          <a href="tel:0434636532" style="color:inherit;">0434 636 532</a><br>
-          <a href="mailto:info@karoomedia.com" style="color:inherit;">info@karoomedia.com</a>
-        </p>
+        <img src="images/logos/Karoo-Digital-Systems.png" alt="Karoo" class="footer__logo" loading="lazy">
+        <p class="footer__brand-tagline">Engineering<br>Systems<br>That Scale.</p>
       </div>
       <nav aria-label="Site links">
         <p class="footer__col-label">Navigation</p>
         <ul class="footer__links" role="list">
           <li><a href="/">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
       <nav aria-label="Division links">
         <p class="footer__col-label">Divisions</p>
         <ul class="footer__links" role="list">
-          <li><a href="services.html#digital-media">Digital Media</a></li>
-          <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
-          <li><a href="services.html#it-services">IT Services</a></li>
-          <li><a href="services.html#ai-automation">AI Automation</a></li>
+          <li><a href="/services#digital-media">Digital Media</a></li>
+          <li><a href="/services#digital-marketing">Digital Marketing</a></li>
+          <li><a href="/services#it-services">IT Services</a></li>
+          <li><a href="/services#ai-automation">AI Automation</a></li>
         </ul>
       </nav>
       <div>
         <p class="footer__col-label">Contact</p>
         <ul class="footer__links" role="list">
           <li><a href="tel:0434636532">0434 636 532</a></li>
-          <li><a href="mailto:info@karoomedia.com">info@karoomedia.com</a></li>
-          <li><a href="contact.html">Send a brief</a></li>
+          <li><a href="mailto:hello@karoo.com.au">hello@karoo.com.au</a></li>
+          <li><a href="/contact" class="footer__brief-btn">Send a brief</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer__bottom">
+  </div>
+  <div class="footer__bottom-bar">
+    <div class="container footer__bottom-bar__inner">
       <p class="footer__copy">&copy; 2026 Karoo. All rights reserved. Melbourne, Australia.</p>
       <nav class="footer__legal" aria-label="Legal links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </nav>
     </div>
   </div>
@@ -730,7 +1224,7 @@
     "name": "Victoria"
   },
   "telephone": "0434636532",
-  "email": "info@karoomedia.com",
+  "email": "hello@karoo.com.au",
   "priceRange": "$$",
   "knowsAbout": [
     "Google Ads",

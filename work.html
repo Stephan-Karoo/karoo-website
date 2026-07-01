@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <title>Client Work &amp; Projects | Karoo Media Melbourne</title>
-  <meta name="description" content="Childcare centres, manufacturers, trades, food brands — see how Karoo Media has delivered websites, ad campaigns, and automation systems across Melbourne and beyond.">
-  <link rel="canonical" href="https://karoo.com.au/work.html">
+  <meta name="description" content="25 client projects across digital marketing, web development, IT, and AI automation. Childcare, manufacturing, trades, food brands — see Karoo Media's track record.">
+  <link rel="canonical" href="https://karoo.com.au/work">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Our Work | Karoo Media Melbourne">
-  <meta property="og:description" content="24 client projects across digital marketing, web development, IT, and AI automation. Melbourne digital agency with a track record.">
+  <meta property="og:description" content="25 client projects across digital marketing, web development, IT, and AI automation. Melbourne digital agency with a track record.">
   <meta property="og:image" content="https://karoo.com.au/images/og/karoo-og-work.jpg">
-  <meta property="og:url" content="https://karoo.com.au/work.html">
+  <meta property="og:url" content="https://karoo.com.au/work">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Karoo Media">
 
@@ -26,47 +26,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="preload" href="fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#A56432">
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
+
+  <!-- GA4: paste your <script> tag here -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2R2YN0DMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V2R2YN0DMT');
+</script>
 </head>
 <body>
 
 <!-- ── Navbar ─────────────────────────────────────────────── -->
 <nav class="navbar" id="navbar" aria-label="Main navigation">
   <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo" aria-label="Karoo home">
+    <a href="/" class="navbar__logo" aria-label="Karoo home">
       <img src="images/logos/Karoo-LIGHT.png" alt="Karoo" height="34" style="width:auto;">
     </a>
     <ul class="navbar__links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="work.html" class="active">Work</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/work" class="active">Work</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
-    <a href="contact.html" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
+    <a href="/contact" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
     <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <nav class="navbar__mobile-menu" aria-label="Mobile navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="work.html">Work</a>
-    <a href="contact.html">Contact</a>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/work">Work</a>
+    <a href="/contact">Contact</a>
   </nav>
 </nav>
 
 <!-- ── Page Hero ──────────────────────────────────────────── -->
 <header class="page-hero">
-  <div class="page-hero__bar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="page-hero__bar" aria-hidden="true"></div>
   <div class="container page-hero__inner">
     <p class="page-hero__eyebrow">Client portfolio</p>
     <h1 class="page-hero__heading">Work that<br>shipped.</h1>
     <p class="page-hero__sub">
-      Eighteen businesses across manufacturing, caravans, product, services,
-      and e-commerce — websites, campaigns, IT infrastructure, and automation systems.
+      From childcare centres to engineering firms, food brands to professional services —
+      websites, campaigns, IT infrastructure, and automation systems built to perform.
     </p>
   </div>
 </header>
@@ -78,11 +99,11 @@
     <div class="proof__header">
       <div>
         <p class="section-label reveal" id="work-heading">All projects</p>
-        <h2 class="reveal reveal--delay-1">18 clients.<br>Four divisions.</h2>
+        <h2 class="reveal reveal--delay-1">Every industry.<br>Every system.</h2>
       </div>
       <p class="reveal reveal--delay-2" style="max-width:38ch; font-size:0.95rem;">
-        Filter by division, or browse everything. Each card represents a real engagement —
-        websites, campaigns, cloud migrations, or automation builds.
+        Browse by division or explore everything. Each project represents a real engagement
+        across childcare, manufacturing, food, trades, engineering, and professional services.
       </p>
     </div>
 
@@ -95,24 +116,23 @@
       <button class="filter-btn" data-filter="ai">AI Automation</button>
     </div>
 
-    <!-- Project grid — 18 clients -->
+    <!-- Project grid — 25 clients -->
     <div class="work-grid" role="list" aria-label="Client projects">
 
-      <!-- ADVMD — Website + AI Automation -->
-      <article class="project-card" data-division="ai" role="listitem">
+      <!-- Adventure Motorcycle Database — Web + SEO -->
+      <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/ADVMD.jpg" alt="ADVMD" loading="lazy">
+            <img src="images/client-logos/Adventure_Motorcycle_Database.jpg" alt="Adventure Motorcycle Database" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
           <div class="project-card__tags">
             <span class="tag">Website</span>
-            <span class="tag">AI Automation</span>
-            <span class="tag">Database</span>
+            <span class="tag">SEO</span>
           </div>
-          <h3 class="project-card__title">ADVMD</h3>
-          <p class="project-card__outcome">Website · AI Automation</p>
+          <h3 class="project-card__title">Adventure Motorcycle Database</h3>
+          <p class="project-card__outcome">Website · SEO</p>
         </div>
       </article>
 
@@ -120,7 +140,7 @@
       <article class="project-card" data-division="marketing" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/Bonza-Trailers.jpg" alt="Bonza Trailers" loading="lazy">
+            <img src="images/client-logos/Bonza_Trailers.jpg" alt="Bonza Trailers" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -152,6 +172,24 @@
         </div>
       </article>
 
+      <!-- Caravans WA — Google Ads + Meta Ads -->
+      <article class="project-card" data-division="marketing" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/Caravans_WA.jpg" alt="Caravans WA" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Google Ads</span>
+            <span class="tag">Meta Ads</span>
+            <span class="tag">Caravans</span>
+          </div>
+          <h3 class="project-card__title">Caravans WA</h3>
+          <p class="project-card__outcome">Google Ads · Meta Ads</p>
+        </div>
+      </article>
+
       <!-- CIIG — Website -->
       <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
@@ -169,11 +207,45 @@
         </div>
       </article>
 
+      <!-- CSIRO Care — Web + Content -->
+      <article class="project-card" data-division="media" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/CSIRO_Care.jpg" alt="CSIRO Care" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Website</span>
+            <span class="tag">Content</span>
+          </div>
+          <h3 class="project-card__title">CSIRO Care</h3>
+          <p class="project-card__outcome">Website · Content</p>
+        </div>
+      </article>
+
+      <!-- Elektra Solar — Google Ads + SEO -->
+      <article class="project-card" data-division="marketing" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/Elektra_Solar.jpg" alt="Elektra Solar" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Google Ads</span>
+            <span class="tag">SEO</span>
+          </div>
+          <h3 class="project-card__title">Elektra Solar</h3>
+          <p class="project-card__outcome">Google Ads · SEO</p>
+        </div>
+      </article>
+
       <!-- Fair Dinkum Caravans — Website + Digital Marketing + Digital Media -->
       <article class="project-card" data-division="marketing" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/FairDinkumCaravans.png" alt="Fair Dinkum Caravans" loading="lazy">
+            <img src="images/client-logos/FairDinkum_Caravans.png" alt="FairDinkum Caravans" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -183,12 +255,29 @@
             <span class="tag">Digital Media</span>
             <span class="tag">Caravans</span>
           </div>
-          <h3 class="project-card__title">Fair Dinkum Caravans</h3>
+          <h3 class="project-card__title">FairDinkum Caravans</h3>
           <p class="project-card__outcome">Website · Digital Marketing · Digital Media</p>
         </div>
       </article>
 
-      <!-- GCPD — Website + Digital Marketing -->
+      <!-- Forever Learning — Google Ads + Meta Ads -->
+      <article class="project-card" data-division="marketing" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/Forever_Learning_Kindergarten_Childcare.jpg" alt="Forever Learning Kindergarten &amp; Childcare" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Google Ads</span>
+            <span class="tag">Meta Ads</span>
+          </div>
+          <h3 class="project-card__title">Forever Learning Kindergarten &amp; Childcare</h3>
+          <p class="project-card__outcome">Google Ads · Meta Ads</p>
+        </div>
+      </article>
+
+      <!-- GC Precision Developments — Website + Digital Marketing -->
       <article class="project-card" data-division="marketing" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
@@ -206,11 +295,62 @@
         </div>
       </article>
 
+      <!-- Happy Hippo — Google Ads + Meta Ads -->
+      <article class="project-card" data-division="marketing" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/Happy_Hippo_Kindergarten_Childcare.jpg" alt="Happy Hippo Kindergarten &amp; Childcare" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Google Ads</span>
+            <span class="tag">Meta Ads</span>
+          </div>
+          <h3 class="project-card__title">Happy Hippo Kindergarten &amp; Childcare</h3>
+          <p class="project-card__outcome">Google Ads · Meta Ads</p>
+        </div>
+      </article>
+
+      <!-- Holy Trinity St Nicholas — Web + Design -->
+      <article class="project-card" data-division="media" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/Holy_Trinity_St_Nicholas.jpg" alt="Holy Trinity St Nicholas" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Website</span>
+            <span class="tag">Design</span>
+          </div>
+          <h3 class="project-card__title">Holy Trinity St Nicholas</h3>
+          <p class="project-card__outcome">Website · Design</p>
+        </div>
+      </article>
+
+      <!-- Intelligent Engineering — Web + Branding -->
+      <article class="project-card" data-division="media" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/Intelligent_Engineering.jpg" alt="Intelligent Engineering" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Website</span>
+            <span class="tag">Branding</span>
+          </div>
+          <h3 class="project-card__title">Intelligent Engineering</h3>
+          <p class="project-card__outcome">Website · Branding</p>
+        </div>
+      </article>
+
       <!-- Just Good Food — Website + Digital Marketing + Digital Media + Branding -->
       <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/JGF-Big-Square.jpg" alt="Just Good Food" loading="lazy">
+            <img src="images/client-logos/Just_Good_Food.jpg" alt="Just Good Food" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -226,11 +366,11 @@
         </div>
       </article>
 
-      <!-- NE — Website + IT Support -->
+      <!-- Network Engineering — Website + IT Support -->
       <article class="project-card" data-division="it" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/NE.jpg" alt="NE" loading="lazy">
+            <img src="images/client-logos/Network_Engineering.jpg" alt="Network Engineering" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -239,7 +379,7 @@
             <span class="tag">IT Support</span>
             <span class="tag">Branding</span>
           </div>
-          <h3 class="project-card__title">NE</h3>
+          <h3 class="project-card__title">Network Engineering</h3>
           <p class="project-card__outcome">Website · IT Support</p>
         </div>
       </article>
@@ -248,7 +388,7 @@
       <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/NETrailworx.jpg" alt="NETrailworx" loading="lazy">
+            <img src="images/client-logos/NE_Trailworx.jpg" alt="NE Trailworx" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -256,7 +396,7 @@
             <span class="tag">Digital Media</span>
             <span class="tag">Caravans</span>
           </div>
-          <h3 class="project-card__title">NETrailworx</h3>
+          <h3 class="project-card__title">NE Trailworx</h3>
           <p class="project-card__outcome">Digital Media</p>
         </div>
       </article>
@@ -265,7 +405,7 @@
       <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/nextgen.jpg" alt="NextGen Caravans" loading="lazy">
+            <img src="images/client-logos/NextGen_Caravans.jpg" alt="NextGen Caravans" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -301,7 +441,7 @@
       <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/NurseEmily.png" alt="Nurse Emily" loading="lazy">
+            <img src="images/client-logos/Nurse_Emily.png" alt="Nurse Emily" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -315,11 +455,11 @@
         </div>
       </article>
 
-      <!-- Offroad Ice (LOGO500px) — Website + IT Support -->
+      <!-- Offroad Ice — Website + IT Support -->
       <article class="project-card" data-division="it" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/LOGO500px.png" alt="Offroad Ice" loading="lazy">
+            <img src="images/client-logos/OFFROAD-ICE.png" alt="Offroad Ice" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -333,11 +473,11 @@
         </div>
       </article>
 
-      <!-- PreciseLogo — Website + Branding -->
+      <!-- Precise Laser Cutting — Website + Branding -->
       <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/PreciseLogo-Square2.jpg" alt="PreciseLogo" loading="lazy">
+            <img src="images/client-logos/Precise_Laser_Cutting.jpg" alt="Precise Laser Cutting" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -346,25 +486,7 @@
             <span class="tag">Branding</span>
             <span class="tag">Manufacturing</span>
           </div>
-          <h3 class="project-card__title">PreciseLogo</h3>
-          <p class="project-card__outcome">Website · Branding</p>
-        </div>
-      </article>
-
-      <!-- St Nich — Branding + Website -->
-      <article class="project-card" data-division="media" role="listitem">
-        <div class="project-card__thumb">
-          <div class="project-card__thumb-inner">
-            <img src="images/client-logos/St-Nich.jpg" alt="St Nich" loading="lazy">
-          </div>
-        </div>
-        <div class="project-card__body">
-          <div class="project-card__tags">
-            <span class="tag">Website</span>
-            <span class="tag">Branding</span>
-            <span class="tag">Church</span>
-          </div>
-          <h3 class="project-card__title">St Nich</h3>
+          <h3 class="project-card__title">Precise Laser Cutting</h3>
           <p class="project-card__outcome">Website · Branding</p>
         </div>
       </article>
@@ -373,7 +495,7 @@
       <article class="project-card" data-division="media" role="listitem">
         <div class="project-card__thumb">
           <div class="project-card__thumb-inner">
-            <img src="images/client-logos/TEKO-adventure-500px.jpg" alt="TEKO Adventure" loading="lazy">
+            <img src="images/client-logos/TEKO_Adventure.jpg" alt="TEKO Adventure" loading="lazy">
           </div>
         </div>
         <div class="project-card__body">
@@ -423,6 +545,24 @@
         </div>
       </article>
 
+      <!-- Victory Caravans — Google Ads + Meta Ads -->
+      <article class="project-card" data-division="marketing" role="listitem">
+        <div class="project-card__thumb">
+          <div class="project-card__thumb-inner">
+            <img src="images/client-logos/Victory_Caravans.jpg" alt="Victory Caravans" loading="lazy">
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span class="tag">Google Ads</span>
+            <span class="tag">Meta Ads</span>
+            <span class="tag">Caravans</span>
+          </div>
+          <h3 class="project-card__title">Victory Caravans</h3>
+          <p class="project-card__outcome">Google Ads · Meta Ads</p>
+        </div>
+      </article>
+
     </div><!-- /work-grid -->
   </div>
 </section>
@@ -438,8 +578,8 @@
         We'll tell you honestly if we can help.
       </p>
       <div class="cta-band__actions">
-        <a href="contact.html" class="btn btn--primary btn--magnetic">Send a brief →</a>
-        <a href="services.html" class="btn btn--secondary">See our services</a>
+        <a href="/contact" class="btn btn--primary btn--magnetic">Send a brief →</a>
+        <a href="/services" class="btn btn--secondary">See our services</a>
       </div>
     </div>
   </div>
@@ -450,49 +590,44 @@
   <div class="container">
     <div class="footer__top">
       <div>
-        <img src="images/logos/Karoo-LIGHT.png" alt="Karoo" class="footer__logo"
-             style="filter:invert(1) brightness(0.25);"
-             onerror="this.removeAttribute('style')">
-        <p class="footer__brand-tagline">We engineer systems that scale.</p>
-        <p class="footer__brand-desc">
-          St Kilda, Melbourne VIC 3182<br>
-          <a href="tel:0434636532" style="color:inherit;">0434 636 532</a><br>
-          <a href="mailto:info@karoomedia.com" style="color:inherit;">info@karoomedia.com</a>
-        </p>
+        <img src="images/logos/Karoo-Digital-Systems.png" alt="Karoo" class="footer__logo" loading="lazy">
+        <p class="footer__brand-tagline">Engineering<br>Systems<br>That Scale.</p>
       </div>
       <nav aria-label="Site links">
         <p class="footer__col-label">Navigation</p>
         <ul class="footer__links" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
       <nav aria-label="Division links">
         <p class="footer__col-label">Divisions</p>
         <ul class="footer__links" role="list">
-          <li><a href="services.html#digital-media">Digital Media</a></li>
-          <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
-          <li><a href="services.html#it-services">IT Services</a></li>
-          <li><a href="services.html#ai-automation">AI Automation</a></li>
+          <li><a href="/services#digital-media">Digital Media</a></li>
+          <li><a href="/services#digital-marketing">Digital Marketing</a></li>
+          <li><a href="/services#it-services">IT Services</a></li>
+          <li><a href="/services#ai-automation">AI Automation</a></li>
         </ul>
       </nav>
       <div>
         <p class="footer__col-label">Contact</p>
         <ul class="footer__links" role="list">
           <li><a href="tel:0434636532">0434 636 532</a></li>
-          <li><a href="mailto:info@karoomedia.com">info@karoomedia.com</a></li>
-          <li><a href="contact.html">Send a brief</a></li>
+          <li><a href="mailto:hello@karoo.com.au">hello@karoo.com.au</a></li>
+          <li><a href="/contact">Send a brief</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer__bottom">
+  </div>
+  <div class="footer__bottom-bar">
+    <div class="container footer__bottom-bar__inner">
       <p class="footer__copy">&copy; 2026 Karoo. All rights reserved. Melbourne, Australia.</p>
       <nav class="footer__legal" aria-label="Legal links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </nav>
     </div>
   </div>
@@ -504,7 +639,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Karoo Media — Client Work",
-  "url": "https://karoo.com.au/work.html",
+  "url": "https://karoo.com.au/work",
   "description": "Portfolio of digital marketing, web development, IT, and AI automation projects delivered by Karoo Media for Australian businesses.",
   "provider": { "@id": "https://karoo.com.au/#business" }
 }

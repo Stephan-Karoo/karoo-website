@@ -1,0 +1,21 @@
+# ══════════════════════════════════════════════════════════════
+#  Karoo Media — Apache configuration (SiteGround)
+#  Purpose: clean URLs — serve .html pages without the extension
+# ══════════════════════════════════════════════════════════════
+
+Options -MultiViews
+DirectoryIndex index.html
+RewriteEngine On
+
+# ── 301: /index.html → / ──────────────────────────────────────
+RewriteCond %{THE_REQUEST} ^[A-Z]+\s/index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# ── 301: /page.html → /page ──────────────────────────────────
+RewriteCond %{THE_REQUEST} ^[A-Z]+\s/([^./?]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# ── Internal rewrite: /page → /page.html ─────────────────────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^./]+)$ $1.html [L]
