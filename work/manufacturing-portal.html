@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#A56432">
+  <title>Stock Management Portal for an Australian Manufacturer | Karoo Case Study</title>
+  <meta name="description" content="How we built a centralised stock portal connecting Xero, Monday.com, and WooCommerce for an Australian suspension kit manufacturer. 970+ products, 3 locations.">
+  <link rel="canonical" href="https://karoo.com.au/work/manufacturing-portal">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Manufacturing Stock Portal | Karoo Case Study">
+  <meta property="og:description" content="How we built a centralised stock portal connecting Xero, Monday.com, and WooCommerce for an Australian suspension kit manufacturer.">
+  <meta property="og:image" content="https://karoo.com.au/images/og/karoo-og-work.jpg">
+  <meta property="og:url" content="https://karoo.com.au/work/manufacturing-portal">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Karoo Media">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manufacturing Stock Portal | Karoo Case Study">
+  <meta name="twitter:description" content="How we built a centralised stock portal connecting Xero, Monday.com, and WooCommerce for an Australian manufacturer.">
+  <meta name="twitter:image" content="https://karoo.com.au/images/og/karoo-og-work.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="../fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2R2YN0DMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V2R2YN0DMT');
+</script>
+
+<style>
+  .cs-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); margin-top: var(--s5); }
+  .cs-stat { background: var(--bg-card); border-radius: var(--r-md); padding: var(--s5) var(--s3); text-align: center; }
+  .cs-stat__num { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text); display: block; margin-bottom: 0.35rem; }
+  .cs-stat__label { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-muted); }
+  .cs-tools { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--s3); }
+  .cs-tool { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-pill); padding: 0.5em 1.2em; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text-muted); }
+  .cs-features { list-style: none; padding: 0; column-count: 2; column-gap: var(--s4); margin-top: var(--s4); }
+  .cs-features li { position: relative; padding-left: 1.5rem; margin-bottom: var(--s2); font-family: var(--font-body); font-size: 1rem; color: var(--text-muted); line-height: 1.7; break-inside: avoid; }
+  .cs-features li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
+  .cs-screenshot { max-width: 900px; margin: var(--s5) auto 0; }
+  .cs-screenshot img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.09); }
+  .cs-screenshot figcaption { text-align: center; font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-subtle); margin-top: var(--s2); }
+  .cs-approach { counter-reset: approach; list-style: none; padding: 0; }
+  .cs-approach li { counter-increment: approach; display: flex; gap: var(--s3); align-items: flex-start; margin-bottom: var(--s4); }
+  .cs-approach li::before { content: counter(approach); font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--blue); min-width: 2rem; }
+  @media (max-width: 768px) {
+    .cs-stats { grid-template-columns: repeat(2, 1fr); }
+    .cs-features { column-count: 1; }
+  }
+  @media (max-width: 480px) {
+    .cs-stats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="/" class="navbar__logo" aria-label="Karoo home">
+      <img src="../images/logos/Karoo-LIGHT.png" alt="Karoo" height="34" style="width:auto;">
+    </a>
+    <ul class="navbar__links" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/work" class="active">Work</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/contact" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
+    <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar__mobile-menu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/work">Work</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="btn btn--primary" style="margin-top:0.5rem; text-align:center; justify-content:center;">Start a project →</a>
+  </nav>
+</nav>
+
+<!-- ── Page Hero ──────────────────────────────────────────── -->
+<header class="page-hero">
+  <div class="page-hero__bar" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="page-hero__eyebrow">Case Study</p>
+    <h1 class="page-hero__heading">Manufacturing<br>Stock Portal</h1>
+    <p class="page-hero__sub">
+      A centralised stock management system connecting Xero, Monday.com, and WooCommerce
+      for an Australian suspension kit manufacturer. 970+ products across 3 warehouse locations.
+    </p>
+  </div>
+</header>
+
+<!-- ── Overview ───────────────────────────────────────────── -->
+<section aria-labelledby="overview-heading">
+  <div class="container">
+    <p class="section-label reveal" id="overview-heading">Overview</p>
+    <h2 class="reveal reveal--delay-1">Replacing spreadsheets<br>with a real system.</h2>
+    <div class="reveal reveal--delay-2" style="max-width:var(--max-w-text); margin-top:var(--s4);">
+      <p>
+        An Australian suspension kit manufacturer needed to move from spreadsheet-based
+        stock tracking to a centralised operations portal. Stock was managed across three
+        physical warehouse locations with no single source of truth. Orders came in via
+        email and phone, production was tracked on Monday.com with no connection to the
+        ordering system, and invoices were created manually in Xero.
+      </p>
+      <p style="margin-top:var(--s2);">
+        We built a custom React-based portal that connects their eCommerce store,
+        accounting system, production tracker, and warehouse operations into one system.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── The Challenge ──────────────────────────────────────── -->
+<section style="background:var(--bg-raised);" aria-labelledby="challenge-heading">
+  <div class="container">
+    <p class="section-label reveal" id="challenge-heading">The challenge</p>
+    <h2 class="reveal reveal--delay-1">Multiple systems.<br>No connection.</h2>
+    <ul class="cs-features reveal reveal--delay-2">
+      <li>Stock tracked in spreadsheets across 3 warehouse locations</li>
+      <li>No real-time visibility into stock levels for sales or warehouse staff</li>
+      <li>Orders arriving via email, phone, and WooCommerce with no unified process</li>
+      <li>Manual invoice creation in Xero for every order</li>
+      <li>Production tracked on Monday.com with no link to orders or stock</li>
+      <li>No low-stock alerts — reordering was reactive, not proactive</li>
+      <li>BOM (Bill of Materials) relationships managed manually</li>
+      <li>No role-based access — everyone saw everything or nothing</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── What We Built ─────────────────────────────────────── -->
+<section aria-labelledby="built-heading">
+  <div class="container">
+    <p class="section-label reveal" id="built-heading">What we built</p>
+    <h2 class="reveal reveal--delay-1">A complete operations<br>portal.</h2>
+    <ul class="cs-features reveal reveal--delay-2">
+      <li>Centralised stock dashboard with real-time levels across all 3 locations</li>
+      <li>Order management system with basket flow and per-account pricing</li>
+      <li>BOM tracking — ordering a kit automatically reserves every component</li>
+      <li>Xero integration — invoices generated automatically on order approval</li>
+      <li>Monday.com integration — approved orders create production items on factory boards</li>
+      <li>WooCommerce sync — online shop stock stays in sync with portal levels</li>
+      <li>Low-stock alerts with configurable thresholds per SKU</li>
+      <li>Role-based access for admin, warehouse, and sales staff</li>
+      <li>Product management with categories, images, and pricing tiers</li>
+      <li>Order approval workflow with status tracking</li>
+      <li>Stock transfer between warehouse locations</li>
+      <li>Reporting and export functionality</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── Key Numbers ────────────────────────────────────────── -->
+<section style="background:var(--bg-raised);" aria-labelledby="numbers-heading">
+  <div class="container">
+    <p class="section-label reveal" id="numbers-heading">Key numbers</p>
+    <h2 class="reveal reveal--delay-1">The system at<br>a glance.</h2>
+    <div class="cs-stats reveal reveal--delay-2">
+      <div class="cs-stat">
+        <span class="cs-stat__num">970+</span>
+        <span class="cs-stat__label">Products managed</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__num">17</span>
+        <span class="cs-stat__label">Product categories</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__num">3</span>
+        <span class="cs-stat__label">Warehouse locations</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__num">3,400+</span>
+        <span class="cs-stat__label">BOM relationships</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__num">500+</span>
+        <span class="cs-stat__label">SKU alert thresholds</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__num">14wk</span>
+        <span class="cs-stat__label">Build timeline</span>
+      </div>
+    </div>
+
+    <figure class="cs-screenshot reveal">
+      <img src="../images/work/n8n-workflow-monday-orders.png"
+           alt="n8n workflow connecting Monday.com orders to stock management portal"
+           loading="lazy">
+      <figcaption>n8n workflow — order processing and Monday.com production integration</figcaption>
+    </figure>
+
+    <figure class="cs-screenshot reveal">
+      <img src="../images/work/supabase-database.png"
+           alt="Supabase PostgreSQL database schema for manufacturing stock portal"
+           loading="lazy">
+      <figcaption>Supabase — PostgreSQL database powering the stock portal</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ── The Approach ───────────────────────────────────────── -->
+<section aria-labelledby="approach-heading">
+  <div class="container">
+    <p class="section-label reveal" id="approach-heading">The approach</p>
+    <h2 class="reveal reveal--delay-1">Documentation-first<br>methodology.</h2>
+    <ol class="cs-approach reveal reveal--delay-2" style="margin-top:var(--s4); max-width:var(--max-w-text);">
+      <li>Mapped the complete data flow — where stock lives, how orders move, where invoices go, how production is tracked</li>
+      <li>Full system architecture and database schema documented before any code was written</li>
+      <li>Phased build over 14 weeks with a shared progress tracker — the client could see exactly where we were at any point</li>
+      <li>Integration testing with Xero, Monday.com, and WooCommerce in a staging environment before go-live</li>
+      <li>Go-live with staff training, then ongoing monthly maintenance covering monitoring, health checks, and updates</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── Technologies ──────────────────────────────────────── -->
+<section style="background:var(--bg-raised);" aria-labelledby="tech-heading">
+  <div class="container">
+    <p class="section-label reveal" id="tech-heading">Technologies</p>
+    <h2 class="reveal reveal--delay-1">Built with.</h2>
+    <div class="cs-tools reveal reveal--delay-2">
+      <span class="cs-tool">React</span>
+      <span class="cs-tool">Supabase</span>
+      <span class="cs-tool">PostgreSQL</span>
+      <span class="cs-tool">n8n</span>
+      <span class="cs-tool">Xero API</span>
+      <span class="cs-tool">Monday.com API</span>
+      <span class="cs-tool">WooCommerce API</span>
+      <span class="cs-tool">Railway</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Band ───────────────────────────────────────────── -->
+<section class="cta-band" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-band__inner" style="align-items:center; text-align:center; max-width:100%;">
+      <p class="cta-band__eyebrow">Start a project</p>
+      <h2 class="cta-band__heading" id="cta-heading">Need a system like this?</h2>
+      <p class="cta-band__body">
+        Tell us what you're managing manually. We'll map the system and show you
+        what's possible.
+      </p>
+      <div class="cta-band__actions" style="justify-content:center;">
+        <a href="/contact" class="btn btn--primary btn--magnetic">Talk to Stephan →</a>
+        <a href="/stock-portals" class="btn btn--secondary">See the service →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <img src="../images/logos/Karoo-Digital-Systems.png" alt="Karoo" class="footer__logo" loading="lazy">
+        <p class="footer__brand-tagline">Engineering<br>Systems<br>That Scale.</p>
+      </div>
+      <nav aria-label="Site links">
+        <p class="footer__col-label">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Division links">
+        <p class="footer__col-label">Divisions</p>
+        <ul class="footer__links" role="list">
+          <li><a href="/services#digital-media">Digital Media</a></li>
+          <li><a href="/services#digital-marketing">Digital Marketing</a></li>
+          <li><a href="/services#it-services">IT Services</a></li>
+          <li><a href="/services#ai-automation">AI Automation</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer__col-label">Contact</p>
+        <ul class="footer__links" role="list">
+          <li><a href="tel:0434636532">0434 636 532</a></li>
+          <li><a href="mailto:hello@karoo.com.au">hello@karoo.com.au</a></li>
+          <li><a href="/contact" class="footer__brief-btn">Send a brief</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom-bar">
+    <div class="container footer__bottom-bar__inner">
+      <p class="footer__copy">&copy; 2026 Karoo. All rights reserved. Melbourne, Australia.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Schema: TechArticle ────────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://karoo.com.au/work/manufacturing-portal",
+  "url": "https://karoo.com.au/work/manufacturing-portal",
+  "name": "Stock Management Portal for an Australian Manufacturer",
+  "description": "How we built a centralised stock portal connecting Xero, Monday.com, and WooCommerce for an Australian suspension kit manufacturer. 970+ products, 3 locations.",
+  "mainEntity": {
+    "@type": "TechArticle",
+    "headline": "Manufacturing Stock Portal — Karoo Case Study",
+    "description": "A centralised stock management system connecting Xero, Monday.com, and WooCommerce for an Australian suspension kit manufacturer. 970+ products across 3 warehouse locations.",
+    "author": {
+      "@type": "Person",
+      "@id": "https://karoo.com.au/#stephan",
+      "name": "Stephan Alberts"
+    },
+    "publisher": { "@id": "https://karoo.com.au/#organization" },
+    "datePublished": "2026-06-01",
+    "proficiencyLevel": "Expert",
+    "dependencies": "React, Supabase, PostgreSQL, n8n, Xero API, Monday.com API, WooCommerce API"
+  }
+}
+</script>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>

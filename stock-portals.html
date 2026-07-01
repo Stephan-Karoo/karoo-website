@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#A56432">
+  <title>Custom Stock Management &amp; Operations Portals | Karoo Digital Systems Melbourne</title>
+  <meta name="description" content="Custom-built stock management portals with Xero integration, BOM tracking, and multi-location inventory. React and n8n by Karoo Digital Systems, Melbourne.">
+  <link rel="canonical" href="https://karoo.com.au/stock-portals">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Custom Stock Management Portals | Karoo Digital Systems">
+  <meta property="og:description" content="Custom-built stock management portals with Xero integration, BOM tracking, and multi-location inventory.">
+  <meta property="og:image" content="https://karoo.com.au/images/og/karoo-og-services.jpg">
+  <meta property="og:url" content="https://karoo.com.au/stock-portals">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Karoo Media">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Custom Stock Management Portals | Karoo Digital Systems">
+  <meta name="twitter:description" content="Custom-built stock management portals with Xero integration, BOM tracking, and multi-location inventory.">
+  <meta name="twitter:image" content="https://karoo.com.au/images/og/karoo-og-services.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2R2YN0DMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V2R2YN0DMT');
+</script>
+
+<style>
+  .sp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); margin-top: var(--s4); }
+  .sp-stats--6 { grid-template-columns: repeat(3, 1fr); }
+  .sp-stat { background: var(--bg-card); border-radius: var(--r-md); padding: var(--s4) var(--s3); text-align: center; }
+  .sp-stat__num { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); display: block; margin-bottom: 0.25rem; }
+  .sp-stat__label { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); }
+  .sp-tools { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--s3); }
+  .sp-tool { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-pill); padding: 0.5em 1.2em; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text-muted); }
+  .sp-steps { counter-reset: step; list-style: none; padding: 0; }
+  .sp-steps li { counter-increment: step; display: flex; gap: var(--s3); align-items: flex-start; margin-bottom: var(--s4); }
+  .sp-steps li::before { content: counter(step); font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--blue); min-width: 2rem; }
+  .sp-bullets { list-style: none; padding: 0; }
+  .sp-bullets li { position: relative; padding-left: 1.5rem; margin-bottom: var(--s2); font-family: var(--font-body); font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; }
+  .sp-bullets li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
+  .sp-features { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
+  .sp-feature { padding: var(--s3); background: var(--bg-card); border-radius: var(--r-md); }
+  .sp-feature strong { font-family: var(--font-ui); font-size: 0.95rem; color: var(--text); display: block; margin-bottom: 0.25rem; }
+  .sp-feature span { font-family: var(--font-body); font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
+  .sp-screenshot { max-width: 900px; margin: var(--s4) auto 0; }
+  .sp-screenshot img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.09); }
+  .sp-screenshot figcaption { text-align: center; font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-subtle); margin-top: var(--s2); }
+  @media (max-width: 768px) {
+    .sp-stats, .sp-stats--6 { grid-template-columns: repeat(2, 1fr); }
+    .sp-features { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .sp-stats, .sp-stats--6 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="/" class="navbar__logo" aria-label="Karoo home">
+      <img src="images/logos/Karoo-LIGHT.png" alt="Karoo" height="34" style="width:auto;">
+    </a>
+    <ul class="navbar__links" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/contact" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
+    <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar__mobile-menu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/work">Work</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="btn btn--primary" style="margin-top:0.5rem; text-align:center; justify-content:center;">Start a project →</a>
+  </nav>
+</nav>
+
+<!-- ── Page Hero ──────────────────────────────────────────── -->
+<header class="page-hero">
+  <div class="page-hero__bar" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="page-hero__eyebrow">AI Automation</p>
+    <h1 class="page-hero__heading">Custom Stock<br>Management Portals</h1>
+    <p class="page-hero__sub">
+      Replace scattered spreadsheets with a centralised system. Real-time stock,
+      automated invoicing, and production tracking — built for manufacturers and wholesalers.
+    </p>
+  </div>
+</header>
+
+<!-- ── The Problem ────────────────────────────────────────── -->
+<section aria-labelledby="problem-heading">
+  <div class="container">
+    <p class="section-label reveal" id="problem-heading">The problem</p>
+    <h2 class="reveal reveal--delay-1">Spreadsheets don't<br>scale.</h2>
+    <ul class="sp-bullets reveal reveal--delay-2" style="margin-top:var(--s4); max-width:var(--max-w-text);">
+      <li>Stock tracked across spreadsheets that nobody trusts</li>
+      <li>Orders processed through a mix of email, phone, and manual entry</li>
+      <li>Sales can't see stock levels, finance can't see order status</li>
+      <li>Manual invoice creation in Xero eating hours every week</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── What We Build ─────────────────────────────────────── -->
+<section style="background:var(--bg-raised);" aria-labelledby="build-heading">
+  <div class="container">
+    <p class="section-label reveal" id="build-heading">What we build</p>
+    <h2 class="reveal reveal--delay-1">Everything connected.<br>Nothing manual.</h2>
+    <div class="sp-features reveal reveal--delay-2" style="margin-top:var(--s4);">
+      <div class="sp-feature">
+        <strong>Centralised Stock Dashboard</strong>
+        <span>Real-time visibility across multiple locations.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Order Management</strong>
+        <span>Basket flow, per-account pricing, approval workflows.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>BOM Tracking</strong>
+        <span>When a kit is ordered, every component is automatically tracked.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Xero Integration</strong>
+        <span>Invoices generated automatically on order approval.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Monday.com Integration</strong>
+        <span>Approved orders create production items on factory boards.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>WooCommerce Sync</strong>
+        <span>Online shop stays in sync with portal stock levels.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Low-Stock Alerts</strong>
+        <span>Configurable thresholds across your full product catalogue.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Role-Based Access</strong>
+        <span>Different views for admin, warehouse, and sales staff.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How It Works ───────────────────────────────────────── -->
+<section aria-labelledby="how-heading">
+  <div class="container">
+    <p class="section-label reveal" id="how-heading">How it works</p>
+    <h2 class="reveal reveal--delay-1">Mapped, documented,<br>then built.</h2>
+    <ol class="sp-steps reveal reveal--delay-2" style="margin-top:var(--s4); max-width:var(--max-w-text);">
+      <li>We map your current data flow — where stock lives, how orders move, where invoices go</li>
+      <li>Full system architecture documented before any code is written</li>
+      <li>Phased build with a progress tracker you can see — no black boxes</li>
+      <li>Go live with training, then ongoing monthly maintenance</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── Real Project ───────────────────────────────────────── -->
+<section style="background:var(--bg-raised);" aria-labelledby="project-heading">
+  <div class="container">
+    <p class="section-label reveal" id="project-heading">Real project</p>
+    <h2 class="reveal reveal--delay-1">Built for an Australian<br>Suspension Kit Manufacturer</h2>
+    <div class="reveal reveal--delay-2" style="max-width:var(--max-w-text); margin-top:var(--s4);">
+      <p>
+        A manufacturer managing stock across three physical locations using spreadsheets.
+        Orders came in via email and phone. Production was tracked on Monday.com with no
+        connection to their ordering system. Invoices were created manually in Xero.
+      </p>
+      <p style="margin-top:var(--s2);">
+        We built a centralised portal connecting their eCommerce store, accounting system,
+        production tracker, and warehouse operations. Orders flow in, stock updates
+        automatically, invoices generate in Xero, and production items appear on the
+        Monday.com factory board.
+      </p>
+    </div>
+
+    <div class="sp-stats sp-stats--6 reveal">
+      <div class="sp-stat">
+        <span class="sp-stat__num">970+</span>
+        <span class="sp-stat__label">Products managed</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">17</span>
+        <span class="sp-stat__label">Categories</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">3</span>
+        <span class="sp-stat__label">Warehouse locations</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">3,400+</span>
+        <span class="sp-stat__label">BOM relationships</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">500+</span>
+        <span class="sp-stat__label">SKU alert thresholds</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">14wk</span>
+        <span class="sp-stat__label">Build timeline</span>
+      </div>
+    </div>
+
+    <figure class="sp-screenshot reveal">
+      <img src="images/work/n8n-workflow-monday-orders.png"
+           alt="n8n workflow connecting Monday.com orders to stock management portal"
+           loading="lazy">
+      <figcaption>n8n workflow — order processing and Monday.com production integration</figcaption>
+    </figure>
+
+    <figure class="sp-screenshot reveal">
+      <img src="images/work/supabase-database.png"
+           alt="Supabase PostgreSQL database schema for stock management portal"
+           loading="lazy">
+      <figcaption>Supabase — PostgreSQL database powering the stock portal</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ── Tools & Platforms ──────────────────────────────────── -->
+<section aria-labelledby="tools-heading">
+  <div class="container">
+    <p class="section-label reveal" id="tools-heading">Tools &amp; platforms</p>
+    <div class="sp-tools reveal reveal--delay-1">
+      <span class="sp-tool">React</span>
+      <span class="sp-tool">Supabase</span>
+      <span class="sp-tool">PostgreSQL</span>
+      <span class="sp-tool">n8n</span>
+      <span class="sp-tool">Xero API</span>
+      <span class="sp-tool">Monday.com API</span>
+      <span class="sp-tool">WooCommerce API</span>
+      <span class="sp-tool">Railway</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────── -->
+<section class="faq-section" style="background:var(--bg-raised);" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <p class="section-label reveal">Common questions</p>
+    <h2 class="reveal reveal--delay-1" id="faq-heading">Before you<br>get started.</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>Can this connect to my existing accounting software?</h3>
+        <p>Yes. We integrate directly with Xero and can connect to MYOB and other platforms via API.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>How many products can the system handle?</h3>
+        <p>There's no practical limit. Our largest portal manages 970+ products across 17 categories with 3,400+ BOM component relationships.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Do I need to change my current tools?</h3>
+        <p>No. The portal connects to what you already use — Xero, Monday.com, Shopify, WooCommerce. That's the point.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>How long does a typical build take?</h3>
+        <p>Depends on complexity. A full portal with integrations typically takes 10–16 weeks. Simpler setups can be faster.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What happens after launch?</h3>
+        <p>Monthly maintenance covers system monitoring, workflow health checks, minor updates, and support. Your systems don't just launch — they stay healthy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Band ───────────────────────────────────────────── -->
+<section class="cta-band" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-band__inner" style="align-items:center; text-align:center; max-width:100%;">
+      <p class="cta-band__eyebrow">Ready to begin?</p>
+      <h2 class="cta-band__heading" id="cta-heading">Ready to replace<br>the spreadsheets?</h2>
+      <div class="cta-band__actions" style="justify-content:center;">
+        <a href="/contact" class="btn btn--primary btn--magnetic">Talk to Stephan →</a>
+        <a href="/work/manufacturing-portal" class="btn btn--secondary">See the case study →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <img src="images/logos/Karoo-Digital-Systems.png" alt="Karoo" class="footer__logo" loading="lazy">
+        <p class="footer__brand-tagline">Engineering<br>Systems<br>That Scale.</p>
+      </div>
+      <nav aria-label="Site links">
+        <p class="footer__col-label">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Division links">
+        <p class="footer__col-label">Divisions</p>
+        <ul class="footer__links" role="list">
+          <li><a href="/services#digital-media">Digital Media</a></li>
+          <li><a href="/services#digital-marketing">Digital Marketing</a></li>
+          <li><a href="/services#it-services">IT Services</a></li>
+          <li><a href="/services#ai-automation">AI Automation</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer__col-label">Contact</p>
+        <ul class="footer__links" role="list">
+          <li><a href="tel:0434636532">0434 636 532</a></li>
+          <li><a href="mailto:hello@karoo.com.au">hello@karoo.com.au</a></li>
+          <li><a href="/contact" class="footer__brief-btn">Send a brief</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom-bar">
+    <div class="container footer__bottom-bar__inner">
+      <p class="footer__copy">&copy; 2026 Karoo. All rights reserved. Melbourne, Australia.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Schema: WebPage + Service + FAQPage ────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://karoo.com.au/stock-portals",
+  "url": "https://karoo.com.au/stock-portals",
+  "name": "Custom Stock Management & Operations Portals",
+  "description": "Custom-built stock management portals with Xero integration, BOM tracking, and multi-location inventory. React and n8n by Karoo Digital Systems, Melbourne.",
+  "provider": { "@id": "https://karoo.com.au/#organization" },
+  "mainEntity": {
+    "@type": "Service",
+    "name": "Custom Stock Management & Operations Portals",
+    "provider": { "@id": "https://karoo.com.au/#organization" },
+    "description": "Custom-built stock management portals with Xero integration, BOM tracking, multi-location inventory, automated invoicing, and production tracking for manufacturers and wholesalers.",
+    "areaServed": "Australia",
+    "serviceType": "Custom Software Development"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can this connect to my existing accounting software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We integrate directly with Xero and can connect to MYOB and other platforms via API."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many products can the system handle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no practical limit. Our largest portal manages 970+ products across 17 categories with 3,400+ BOM component relationships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to change my current tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The portal connects to what you already use — Xero, Monday.com, Shopify, WooCommerce. That's the point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical build take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depends on complexity. A full portal with integrations typically takes 10–16 weeks. Simpler setups can be faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly maintenance covers system monitoring, workflow health checks, minor updates, and support. Your systems don't just launch — they stay healthy."
+      }
+    }
+  ]
+}
+</script>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

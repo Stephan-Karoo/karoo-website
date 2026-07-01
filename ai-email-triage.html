@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#A56432">
+  <title>AI Email Triage Systems for Australian Businesses | Karoo Digital Systems</title>
+  <meta name="description" content="Automated email classification, priority routing, and morning summaries for Microsoft 365. Built with n8n and AI by Karoo Digital Systems, Melbourne.">
+  <link rel="canonical" href="https://karoo.com.au/ai-email-triage">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Email Triage Systems | Karoo Digital Systems">
+  <meta property="og:description" content="Automated email classification, priority routing, and morning summaries for Microsoft 365. Built with n8n and AI.">
+  <meta property="og:image" content="https://karoo.com.au/images/og/karoo-og-services.jpg">
+  <meta property="og:url" content="https://karoo.com.au/ai-email-triage">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Karoo Media">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Email Triage Systems | Karoo Digital Systems">
+  <meta name="twitter:description" content="Automated email classification, priority routing, and morning summaries for Microsoft 365.">
+  <meta name="twitter:image" content="https://karoo.com.au/images/og/karoo-og-services.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="fonts/RoslindaleVariable-VF[Display]-Testing.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2R2YN0DMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V2R2YN0DMT');
+</script>
+
+<style>
+  .sp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s3); margin-top: var(--s4); }
+  .sp-stat { background: var(--bg-card); border-radius: var(--r-md); padding: var(--s4) var(--s3); text-align: center; }
+  .sp-stat__num { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); display: block; margin-bottom: 0.25rem; }
+  .sp-stat__label { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); }
+  .sp-tools { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--s3); }
+  .sp-tool { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-pill); padding: 0.5em 1.2em; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text-muted); }
+  .sp-steps { counter-reset: step; list-style: none; padding: 0; }
+  .sp-steps li { counter-increment: step; display: flex; gap: var(--s3); align-items: flex-start; margin-bottom: var(--s4); }
+  .sp-steps li::before { content: counter(step); font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--blue); min-width: 2rem; }
+  .sp-bullets { list-style: none; padding: 0; }
+  .sp-bullets li { position: relative; padding-left: 1.5rem; margin-bottom: var(--s2); font-family: var(--font-body); font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; }
+  .sp-bullets li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
+  .sp-features { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
+  .sp-feature { padding: var(--s3); background: var(--bg-card); border-radius: var(--r-md); }
+  .sp-feature strong { font-family: var(--font-ui); font-size: 0.95rem; color: var(--text); display: block; margin-bottom: 0.25rem; }
+  .sp-feature span { font-family: var(--font-body); font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
+  .sp-screenshot { max-width: 900px; margin: var(--s4) auto 0; }
+  .sp-screenshot img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.09); }
+  .sp-screenshot figcaption { text-align: center; font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-subtle); margin-top: var(--s2); }
+  @media (max-width: 768px) {
+    .sp-stats { grid-template-columns: repeat(2, 1fr); }
+    .sp-features { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .sp-stats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="/" class="navbar__logo" aria-label="Karoo home">
+      <img src="images/logos/Karoo-LIGHT.png" alt="Karoo" height="34" style="width:auto;">
+    </a>
+    <ul class="navbar__links" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/contact" class="btn btn--primary navbar__cta btn--magnetic">Start a project →</a>
+    <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar__mobile-menu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/work">Work</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="btn btn--primary" style="margin-top:0.5rem; text-align:center; justify-content:center;">Start a project →</a>
+  </nav>
+</nav>
+
+<!-- ── Page Hero ──────────────────────────────────────────── -->
+<header class="page-hero">
+  <div class="page-hero__bar" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="page-hero__eyebrow">AI Automation</p>
+    <h1 class="page-hero__heading">AI Email<br>Triage Systems</h1>
+    <p class="page-hero__sub">
+      Automated email classification, routing, and morning summaries
+      for Microsoft 365 — built for Australian businesses.
+    </p>
+  </div>
+</header>
+
+<!-- ── The Problem ────────────────────────────────────────── -->
+<section aria-labelledby="problem-heading">
+  <div class="container">
+    <p class="section-label reveal" id="problem-heading">The problem</p>
+    <h2 class="reveal reveal--delay-1">Email is eating<br>your morning.</h2>
+    <ul class="sp-bullets reveal reveal--delay-2" style="margin-top:var(--s4); max-width:var(--max-w-text);">
+      <li>Important emails buried under newsletters, marketing, and routine mail</li>
+      <li>Finance, orders, and urgent requests all mixed into one inbox</li>
+      <li>Staff spending 30+ minutes daily sorting and forwarding email</li>
+      <li>Critical items missed or delayed because nobody saw them in time</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── What We Build ─────────────────────────────────────── -->
+<section style="background:var(--bg-raised);" aria-labelledby="build-heading">
+  <div class="container">
+    <p class="section-label reveal" id="build-heading">What we build</p>
+    <h2 class="reveal reveal--delay-1">End-to-end email<br>automation.</h2>
+    <div class="sp-features reveal reveal--delay-2" style="margin-top:var(--s4);">
+      <div class="sp-feature">
+        <strong>AI Email Classification</strong>
+        <span>Incoming mail sorted by priority, type, and urgency using Claude AI.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Automated Folder Routing</strong>
+        <span>Emails moved to the correct Outlook folder without manual effort.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Morning Summary Digest</strong>
+        <span>AI-generated overview of overnight emails, grouped by category.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Multi-Account Support</strong>
+        <span>Same system running across multiple business email addresses.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Custom Categories</strong>
+        <span>Tuned to your business: finance, orders, warranties, HR, marketing.</span>
+      </div>
+      <div class="sp-feature">
+        <strong>Draft Reply Suggestions</strong>
+        <span>AI-prepared responses for routine enquiries.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How It Works ───────────────────────────────────────── -->
+<section aria-labelledby="how-heading">
+  <div class="container">
+    <p class="section-label reveal" id="how-heading">How it works</p>
+    <h2 class="reveal reveal--delay-1">Four steps to<br>inbox zero.</h2>
+    <ol class="sp-steps reveal reveal--delay-2" style="margin-top:var(--s4); max-width:var(--max-w-text);">
+      <li>We connect to your Microsoft 365 mailbox via secure API access</li>
+      <li>AI reads each incoming email, classifies it, and routes it to the right folder</li>
+      <li>At 7am each morning you get a summary email grouped by category</li>
+      <li>We refine the classification with your feedback over 2 weeks until accuracy is tuned</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── Real Project ───────────────────────────────────────── -->
+<section style="background:var(--bg-raised);" aria-labelledby="project-heading">
+  <div class="container">
+    <p class="section-label reveal" id="project-heading">Real project</p>
+    <h2 class="reveal reveal--delay-1">Built for an Australian<br>Manufacturer</h2>
+    <div class="reveal reveal--delay-2" style="max-width:var(--max-w-text); margin-top:var(--s4);">
+      <p>
+        A finance manager monitoring two high-volume email accounts across two business
+        entities. Important emails — supplier invoices, urgent orders, warranty claims —
+        were mixed with routine correspondence. Critical items were being missed.
+      </p>
+      <p style="margin-top:var(--s2);">
+        We built an AI triage system that classifies every incoming email into six categories
+        (Priority, Financial, Warranty, Marketing, HR, Needs Review), routes them to the
+        correct Outlook folder, and delivers a morning summary at 7am. Two rounds of
+        client-led refinement tuned the accuracy to the client's specific needs.
+      </p>
+    </div>
+
+    <div class="sp-stats reveal">
+      <div class="sp-stat">
+        <span class="sp-stat__num">2</span>
+        <span class="sp-stat__label">Email accounts automated</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">6</span>
+        <span class="sp-stat__label">Classification categories</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">7am</span>
+        <span class="sp-stat__label">Daily summary</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat__num">2wk</span>
+        <span class="sp-stat__label">Setup and tuning</span>
+      </div>
+    </div>
+
+    <figure class="sp-screenshot reveal">
+      <img src="images/work/n8n-email-triage-workflow.png"
+           alt="n8n workflow automating AI email triage for Microsoft 365"
+           loading="lazy">
+      <figcaption>n8n workflow — AI email classification and folder routing</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ── Tools & Platforms ──────────────────────────────────── -->
+<section aria-labelledby="tools-heading">
+  <div class="container">
+    <p class="section-label reveal" id="tools-heading">Tools &amp; platforms</p>
+    <div class="sp-tools reveal reveal--delay-1">
+      <span class="sp-tool">n8n</span>
+      <span class="sp-tool">Microsoft Graph API</span>
+      <span class="sp-tool">Claude API</span>
+      <span class="sp-tool">Microsoft 365</span>
+      <span class="sp-tool">Outlook</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────── -->
+<section class="faq-section" style="background:var(--bg-raised);" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <p class="section-label reveal">Common questions</p>
+    <h2 class="reveal reveal--delay-1" id="faq-heading">Before you<br>get started.</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>What email systems does this work with?</h3>
+        <p>Currently Microsoft 365 and Outlook. The system connects via Microsoft Graph API, so any M365 mailbox is supported.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>How accurate is the AI classification?</h3>
+        <p>After 2 weeks of tuning with your feedback, accuracy is typically 90%+ for well-defined categories. Emails the AI isn't sure about go to a "Needs Review" folder.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can it handle multiple email accounts?</h3>
+        <p>Yes. We can run the same system across as many mailboxes as you need, each with account-specific routing rules.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>How long does it take to set up?</h3>
+        <p>Typically 2 weeks — one week for the build and one week for tuning and refinement based on your feedback.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What does ongoing maintenance cost?</h3>
+        <p>Monthly maintenance covers monitoring, workflow health checks, and adjustments as your categories evolve. We'll give you a clear monthly figure upfront.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Band ───────────────────────────────────────────── -->
+<section class="cta-band" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-band__inner" style="align-items:center; text-align:center; max-width:100%;">
+      <p class="cta-band__eyebrow">Ready to begin?</p>
+      <h2 class="cta-band__heading" id="cta-heading">Want to stop sorting<br>email manually?</h2>
+      <div class="cta-band__actions" style="justify-content:center;">
+        <a href="/contact" class="btn btn--primary btn--magnetic">Talk to Stephan →</a>
+        <a href="/work/ai-email-triage" class="btn btn--secondary">See the case study →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <img src="images/logos/Karoo-Digital-Systems.png" alt="Karoo" class="footer__logo" loading="lazy">
+        <p class="footer__brand-tagline">Engineering<br>Systems<br>That Scale.</p>
+      </div>
+      <nav aria-label="Site links">
+        <p class="footer__col-label">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Division links">
+        <p class="footer__col-label">Divisions</p>
+        <ul class="footer__links" role="list">
+          <li><a href="/services#digital-media">Digital Media</a></li>
+          <li><a href="/services#digital-marketing">Digital Marketing</a></li>
+          <li><a href="/services#it-services">IT Services</a></li>
+          <li><a href="/services#ai-automation">AI Automation</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer__col-label">Contact</p>
+        <ul class="footer__links" role="list">
+          <li><a href="tel:0434636532">0434 636 532</a></li>
+          <li><a href="mailto:hello@karoo.com.au">hello@karoo.com.au</a></li>
+          <li><a href="/contact" class="footer__brief-btn">Send a brief</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom-bar">
+    <div class="container footer__bottom-bar__inner">
+      <p class="footer__copy">&copy; 2026 Karoo. All rights reserved. Melbourne, Australia.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Schema: WebPage + Service + FAQPage ────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://karoo.com.au/ai-email-triage",
+  "url": "https://karoo.com.au/ai-email-triage",
+  "name": "AI Email Triage Systems for Australian Businesses",
+  "description": "Automated email classification, priority routing, and morning summaries for Microsoft 365. Built with n8n and AI by Karoo Digital Systems, Melbourne.",
+  "provider": { "@id": "https://karoo.com.au/#organization" },
+  "mainEntity": {
+    "@type": "Service",
+    "name": "AI Email Triage Systems",
+    "provider": { "@id": "https://karoo.com.au/#organization" },
+    "description": "Automated email classification, priority routing, and morning summaries for Microsoft 365 businesses. Built with n8n workflow automation and Claude AI.",
+    "areaServed": "Australia",
+    "serviceType": "AI Email Automation"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What email systems does this work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Currently Microsoft 365 and Outlook. The system connects via Microsoft Graph API, so any M365 mailbox is supported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the AI classification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After 2 weeks of tuning with your feedback, accuracy is typically 90%+ for well-defined categories. Emails the AI isn't sure about go to a Needs Review folder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it handle multiple email accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can run the same system across as many mailboxes as you need, each with account-specific routing rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to set up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically 2 weeks — one week for the build and one week for tuning and refinement based on your feedback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does ongoing maintenance cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly maintenance covers monitoring, workflow health checks, and adjustments as your categories evolve. We'll give you a clear monthly figure upfront."
+      }
+    }
+  ]
+}
+</script>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

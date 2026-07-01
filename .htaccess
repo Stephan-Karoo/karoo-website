@@ -21,7 +21,16 @@ RewriteRule ^ / [R=301,L]
 RewriteCond %{THE_REQUEST} ^[A-Z]+\s/([^./?]+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
+# ── 301: /dir/page.html → /dir/page ─────────────────────────
+RewriteCond %{THE_REQUEST} ^[A-Z]+\s/([^./?]+)/([^./?]+)\.html[\s?] [NC]
+RewriteRule ^ /%1/%2 [R=301,L]
+
 # ── Internal rewrite: /page → /page.html ─────────────────────
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^./]+)$ $1.html [L]
+
+# ── Internal rewrite: /dir/page → /dir/page.html ────────────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^./]+)/([^./]+)$ $1/$2.html [L]
